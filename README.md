@@ -128,7 +128,11 @@ You can deploy this project using:
 - [Twitter](https://twitter.com/ChukwumaMosanya)
 - [LinkedIn](https://www.linkedin.com/in/chukwuma-mosanya)
 
+👤 **Wahaj Ali**
 
+- [GitHub](https://github.com/Wahaj-Ali)
+- [Twitter](https://twitter.com/Ali96Wahaj)
+- [LinkedIn](https://www.linkedin.com/in/wahaj-ali96)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
