@@ -50,7 +50,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- Display a random greeting message
+- Booking a house reseravtion
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -81,7 +81,7 @@ Clone this repository to your desired folder:
 
 ```
   git clone git@github.com:Wahaj-Ali/homely-frontend.git
-  cd hello-react-front-end
+  cd homely-frontend
 ```
 
 ### Install
@@ -162,7 +162,7 @@ If you like this project and want to support me make cooler projects Give this p
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Thank you to microverse for giving me the opportunity to learn and grow as a developer.
+Thank you to  [Murat Korkmaz](https://www.behance.net/muratk) for the design ideas provided.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- LICENSE -->
