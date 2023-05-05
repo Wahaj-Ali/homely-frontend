@@ -41,7 +41,7 @@ button::after {
   height: 100vh;
   width: 200px;
   opacity: 0;
-  position: relative;
+  position: fixed;
   visibility: hidden;
   transition: all 0.25s ease;
   transform: translateX(-50%);
@@ -103,6 +103,7 @@ small {
   visibility: visible;
   transition: all 0.25s ease;
   transform: translateX(0);
+  position: fixed;
 }
 
 .social {
