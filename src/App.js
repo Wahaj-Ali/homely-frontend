@@ -1,9 +1,10 @@
 import './App.css';
+import SideBar from './components/sidebar/SideBar';
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to Homely!</h1>
+      <SideBar />
     </div>
   );
 }
