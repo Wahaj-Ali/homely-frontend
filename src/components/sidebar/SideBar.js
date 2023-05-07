@@ -4,6 +4,7 @@ import {
   FaTwitter, FaFacebookF, FaVine, FaPinterestP,
 } from 'react-icons/fa';
 import { TiSocialGooglePlus } from 'react-icons/ti';
+import Reservations from '../Reservations/Reservations';
 
 const SideBar = () => {
   const [style, setStyle] = useState('menu');
@@ -22,7 +23,7 @@ const SideBar = () => {
   const navLinks = [
     { url: '/houses', name: 'Houses' },
     { url: '/reserve', name: 'Reserve' },
-    { url: '/my_reservations', name: 'My Reservations' },
+    { url: '../Reservations/Reservations.js', name: 'My Reservations' },
     { url: '/add_house', name: 'Add House' },
     { url: '/delete_house', name: 'Delete House' },
   ];
