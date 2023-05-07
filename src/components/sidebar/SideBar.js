@@ -4,7 +4,6 @@ import {
   FaTwitter, FaFacebookF, FaVine, FaPinterestP,
 } from 'react-icons/fa';
 import { TiSocialGooglePlus } from 'react-icons/ti';
-import Reservations from '../Reservations/Reservations';
 
 const SideBar = () => {
   const [style, setStyle] = useState('menu');
