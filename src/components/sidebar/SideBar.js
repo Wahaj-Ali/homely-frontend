@@ -22,7 +22,7 @@ const SideBar = () => {
   const navLinks = [
     { url: '/houses', name: 'Houses' },
     { url: '/reserve', name: 'Reserve' },
-    { url: '../Reservations/Reservations.js', name: 'My Reservations' },
+    { url: '/my_reservations', name: 'My Reservations' },
     { url: '/add_house', name: 'Add House' },
     { url: '/delete_house', name: 'Delete House' },
   ];
