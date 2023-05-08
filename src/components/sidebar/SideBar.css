@@ -105,6 +105,7 @@ small {
   transition: all 0.25s ease;
   transform: translateX(0);
   position: fixed;
+  z-index: 2;
 }
 
 .social {
