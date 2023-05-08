@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { IoCaretBackOutline } from 'react-icons/io5';
+import { AiOutlineRightCircle } from 'react-icons/ai';
 import { housedetail } from '../../mockData';
 import icon from '../../images/icon.png';
 import './HouseDetails.scss';
@@ -31,6 +32,12 @@ const HousesDetails = () => (
           <div className="iconColor">
             <img src={icon} alt="icon" />
           </div>
+          <Link to="/reserve">
+            <button type="button" aria-label="Go back" className="reserve-btn">
+              Book House
+              <AiOutlineRightCircle />
+            </button>
+          </Link>
         </div>
       </div>
     </div>
