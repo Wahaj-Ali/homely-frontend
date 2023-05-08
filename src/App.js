@@ -11,7 +11,7 @@ function App() {
       <Router>
         <SideBar />
         <Routes>
-          <Route path="/houses" element={<Houses />} />
+          <Route path="/" element={<Houses />} />
         </Routes>
       </Router>
     </div>

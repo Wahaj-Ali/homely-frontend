@@ -20,7 +20,7 @@ const SideBar = () => {
   };
 
   const navLinks = [
-    { url: '/houses', name: 'Houses' },
+    { url: '/', name: 'Houses' },
     { url: '/reserve', name: 'Reserve' },
     { url: '/my_reservations', name: 'My Reservations' },
     { url: '/add_house', name: 'Add House' },
@@ -30,7 +30,7 @@ const SideBar = () => {
   return (
     <div>
       <button type="button" onClick={handleClick}>
-        menu
+        Menu
       </button>
       <div className={style}>
         <div className="logo">Homely</div>
