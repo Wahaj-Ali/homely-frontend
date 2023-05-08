@@ -3,7 +3,8 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import SideBar from './components/sidebar/SideBar';
-import { Houses } from './components/houses/Houses';
+import HousesDetails from './components/houses details/HousesDetails';
+import Houses from './components/houses/Houses';
 
 function App() {
   return (
@@ -12,10 +13,10 @@ function App() {
         <SideBar />
         <Routes>
           <Route path="/" element={<Houses />} />
+          <Route path="/:id" element={<HousesDetails />} />
         </Routes>
       </Router>
     </div>
-
   );
 }
 
