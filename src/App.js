@@ -3,7 +3,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import SideBar from './components/sidebar/SideBar';
-import HousesDetails from './components/houses details/HousesDetails';
+import HousesDetails from './components/houses details/HouseDetails';
 import Houses from './components/houses/Houses';
 
 function App() {
