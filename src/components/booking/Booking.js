@@ -1,10 +1,9 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 // import { AiOutlineRightCircle } from 'react-icons/ai';
-import './Reserve.scss';
+import './Booking.scss';
 import bgImage from '../../images/house.jpeg';
 
-const Reserve = () => (
+const Booking = () => (
   <div className="my-reservationPageContainer">
     {/* <img className="harmbugrer" src={harmburger} alt="harmbugger Menu Icon" /> */}
     <img className="bgImage" src={bgImage} alt="background house" />
@@ -24,4 +23,4 @@ const Reserve = () => (
 
 );
 
-export default Reserve;
+export default Booking;

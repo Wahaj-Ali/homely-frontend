@@ -6,7 +6,7 @@ import SideBar from './components/sidebar/SideBar';
 import HousesDetails from './components/houses details/HouseDetails';
 import Houses from './components/houses/Houses';
 import Reservations from './components/reservations/Reservations';
-import Reserve from './components/reserve/Reserve';
+import Booking from './components/booking/Booking';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Route path="/" element={<Houses />} />
           <Route path="/:id" element={<HousesDetails />} />
           <Route path="/Reservations" element={<Reservations />} />
-          <Route path="/Reserve" element={<Reserve />} />
+          <Route path="/Reserve" element={<Booking />} />
         </Routes>
       </Router>
     </div>
