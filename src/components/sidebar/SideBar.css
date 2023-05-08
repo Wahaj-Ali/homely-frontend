@@ -22,6 +22,7 @@ button {
   outline: 0;
   transition: all 0.25s ease;
   z-index: 1000;
+  position: fixed;
 }
 
 button:hover {
