@@ -3,6 +3,7 @@ $primary-color: #121212;
 $secondary-color: rgba(141, 197, 10, 0.788);
 $sous-title: rgba(95, 93, 93, 0.541);
 $background-color: rgba(226, 217, 217, 0.945);
+$lighter-bg : rgb(95 93 93 / 32%);
 $font-stack: 'Montserrat', sans-serif;
 $font: 'Caveat', cursive, serif;
 $border-size: 4px solid $primary-color;
@@ -41,16 +42,6 @@ $box-shadow : 10px 8px 16px rgba(79, 156, 192, 0.384);
 %btn-color {
   color: $text-color;
   background-color: $secondary-color;
-}
-
-img {
-  transition: all 0.4s ease-in-out;
-
-  &:hover {
-    transform: scale(1.1);
-    box-shadow: $box-shadow;
-    opacity: 0.8;
-  }
 }
 
 input,

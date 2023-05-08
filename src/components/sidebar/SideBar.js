@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import './SideBar.css';
 import {
   FaTwitter, FaFacebookF, FaVine, FaPinterestP,
@@ -7,18 +7,18 @@ import { TiSocialGooglePlus } from 'react-icons/ti';
 import { Link } from 'react-router-dom';
 
 const SideBar = () => {
-  const [style, setStyle] = useState('menu');
-  const [menuStatus, setMenuStatus] = useState('open');
+  // const [style, setStyle] = useState('menu');
+  // const [menuStatus, setMenuStatus] = useState('open');
 
-  const handleClick = () => {
-    if (menuStatus === 'open') {
-      setMenuStatus('close');
-      setStyle('menu active');
-    } else if (menuStatus === 'close') {
-      setMenuStatus('open');
-      setStyle('menu');
-    }
-  };
+  // const handleClick = () => {
+  //   if (menuStatus === 'open') {
+  //     setMenuStatus('close');
+  //     setStyle('menu active');
+  //   } else if (menuStatus === 'close') {
+  //     setMenuStatus('open');
+  //     setStyle('menu');
+  //   }
+  // };
 
   const navLinks = [
     { url: '/', name: 'Houses' },
@@ -30,10 +30,10 @@ const SideBar = () => {
 
   return (
     <div>
-      <button type="button" onClick={handleClick}>
+      {/* <button type="button" onClick={handleClick}>
         Menu
-      </button>
-      <div className={style}>
+      </button> */}
+      <div className="menu">
         <div className="logo">Homely</div>
         <ul>
           {navLinks.map(({ url, name }) => (
