@@ -33,16 +33,28 @@ export const housedetail = {
   city: 'Australia',
 };
 
-export const myReservations = [
+export const ReservationsData = [
   {
     id: 1,
     city: 'Australia',
-    date: '2021-09-01',
+    date: '2021-12-23',
   },
 
   {
     id: 2,
-    city: 'Australia',
-    date: '2021-09-01',
+    city: 'USA',
+    date: '2022-03-12',
+  },
+
+  {
+    id: 2,
+    city: 'Mexico',
+    date: '203-09-01',
+  },
+
+  {
+    id: 2,
+    city: 'Canada',
+    date: '2024-9-17',
   },
 ];
