@@ -33,7 +33,7 @@ export const houseData = [
     id: 4,
     name: 'House 4',
     image: 'https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    description: 'Beautiful House in Australia.',
+    description: 'Beautiful House in Australia. One of the best places you can find here in Australia.',
   },
 ];
 
