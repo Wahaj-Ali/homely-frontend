@@ -40,11 +40,17 @@ button::after {
   background: #fff;
   height: 100vh;
   width: 200px;
-  opacity: 0;
+  /* opacity: 0; */
+  /* position: fixed; */
+  /* visibility: hidden; */
+  /* transition: all 0.25s ease; */
+  /* transform: translateX(-50%); */
+  /* opacity: 1; */
+  /* visibility: visible; */
+  /* transition: all 0.25s ease; */
+  /* transform: translateX(0); */
   position: fixed;
-  visibility: hidden;
-  transition: all 0.25s ease;
-  transform: translateX(-50%);
+  z-index: 2;
 }
 
 .menu .logo {
@@ -103,14 +109,14 @@ small {
   padding-bottom: 35px;
 }
 
-.active {
+/* .active {
   opacity: 1;
   visibility: visible;
   transition: all 0.25s ease;
   transform: translateX(0);
   position: fixed;
   z-index: 2;
-}
+} */
 
 .social {
   display: flex;
