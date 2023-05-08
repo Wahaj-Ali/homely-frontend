@@ -7,7 +7,7 @@ import icon from '../../images/icon.png';
 import './HouseDetails.scss';
 
 const HousesDetails = () => (
-  <section>
+  <section className="details-sec">
     <div className="detail-container">
       <div className="image">
         <img src={housedetail.image} alt={housedetail.name} />
