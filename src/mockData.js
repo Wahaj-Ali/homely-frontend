@@ -32,3 +32,17 @@ export const housedetail = {
   description: 'Yellow Concrete House.',
   city: 'Australia',
 };
+
+export const myReservations = [
+  {
+    id: 1,
+    city: 'Australia',
+    date: '2021-09-01',
+  },
+
+  {
+    id: 2,
+    city: 'Australia',
+    date: '2021-09-01',
+  },
+];
