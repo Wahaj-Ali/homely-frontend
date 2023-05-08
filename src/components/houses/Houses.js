@@ -1,5 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {
+  Navigation, A11y,
+} from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 import styles from './Houses.scss';
 
 export const houseData = [
@@ -21,24 +29,38 @@ export const houseData = [
     image: 'https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     description: 'Beautiful House in Australia.',
   },
+  {
+    id: 4,
+    name: 'House 4',
+    image: 'https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    description: 'Beautiful House in Australia.',
+  },
 ];
 
 export const Houses = () => (
-  <section className={styles['doctor-list-section']}>
-    <h2>List of Houses</h2>
+  <section>
+    <h2>LATEST HOUSES</h2>
+    <h3 className="email">Please select your Dream House</h3>
     <div className="points">.........................</div>
-    <ul className={styles['all-doctor-lists']}>
+    <Swiper
+      className="house-list"
+      modules={[Navigation, A11y]}
+      spaceBetween={10}
+      slidesPerView={3}
+      navigation
+    >
       {
         houseData.map((item) => (
-          <li className="list-items" key={item.id}>
-            <div className="doctors-imgs">
+          <SwiperSlide className="list-items" key={item.id}>
+            <div className="houses-imgs">
               <img src={item.image} style={{ width: '70', height: '70' }} alt={item.name} />
             </div>
             <h5 className={styles.name}><Link to={`${item.id}`}>{item.name}</Link></h5>
-            <p className={styles.email}>{item.description}</p>
-          </li>
+            <div className="points">....................</div>
+            <p className="email">{item.description}</p>
+          </SwiperSlide>
         ))
       }
-    </ul>
+    </Swiper>
   </section>
 );
