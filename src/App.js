@@ -6,7 +6,7 @@ import SideBar from './components/sidebar/SideBar';
 import HousesDetails from './components/houses details/HouseDetails';
 import Houses from './components/houses/Houses';
 import Reservations from './components/reservations/Reservations';
-import Reserve from './components/reserve/Reserve';
+import Reserve from './components/reserve/Reserve.js';
 
 function App() {
   return (
