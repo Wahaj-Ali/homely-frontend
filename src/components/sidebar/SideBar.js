@@ -4,6 +4,7 @@ import {
   FaTwitter, FaFacebookF, FaVine, FaPinterestP,
 } from 'react-icons/fa';
 import { TiSocialGooglePlus } from 'react-icons/ti';
+import { Link } from 'react-router-dom';
 
 const SideBar = () => {
   const [style, setStyle] = useState('menu');
@@ -37,7 +38,7 @@ const SideBar = () => {
         <ul>
           {navLinks.map(({ url, name }) => (
             <li key={name}>
-              <a href={url}>{name}</a>
+              <Link to={url}>{name}</Link>
             </li>
           ))}
         </ul>
