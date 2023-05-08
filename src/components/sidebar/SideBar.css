@@ -16,7 +16,7 @@ button {
   position: absolute;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
-  top: 15%;
+  top: 10%;
   left: 0;
   cursor: pointer;
   outline: 0;
@@ -62,10 +62,11 @@ button::after {
 .menu a {
   color: rgb(57, 57, 57);
   text-decoration: none;
-  font-size: large;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 800;
   display: block;
   padding: 20px;
+  text-transform: uppercase;
 }
 
 .menu ul {
@@ -87,6 +88,10 @@ button::after {
   transition: all 0.25s ease;
   background: rgb(151, 191, 15);
   cursor: pointer;
+}
+
+.menu ul li a:hover {
+  color: #fff;
 }
 
 small {
