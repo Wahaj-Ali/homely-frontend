@@ -12,7 +12,7 @@ import styles from './Houses.scss';
 import { houseData } from '../../mockData';
 
 const Houses = () => (
-  <section>
+  <section className="house-sec">
     <h2>LATEST HOUSES</h2>
     <h3 className="email">Please select your Dream House</h3>
     <div className="points">.........................</div>
