@@ -30,4 +30,5 @@ export const housedetail = {
   name: 'House 1',
   image: 'https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   description: 'Yellow Concrete House.',
+  city: 'Australia',
 };
