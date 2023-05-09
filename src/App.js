@@ -5,6 +5,7 @@ import './App.css';
 import SideBar from './components/sidebar/SideBar';
 import HousesDetails from './components/houses details/HouseDetails';
 import Houses from './components/houses/Houses';
+import Reservations from './components/reservations/Reservations';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Houses />} />
           <Route path="/:id" element={<HousesDetails />} />
+          <Route path="reservations" element={<Reservations />} />
         </Routes>
       </Router>
     </div>

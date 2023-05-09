@@ -10,6 +10,7 @@ const Reservations = () => (
         ReservationsData.map((item) => (
           <div className="list-items" key={item.id}>
             <h5 className="city"><Link to={`${item.id}`}>{item.city}</Link></h5>
+            <p className="name">{item.name}</p>
             <p className="date">{item.date}</p>
             <button type="button" className="delete">Cancel Reservation</button>
           </div>
