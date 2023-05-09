@@ -1,0 +1,36 @@
+.myReservationPageContainer {
+  align-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: #00ff1e;
+  mix-blend-mode: multiply;
+  width: 100%;
+  margin: auto;
+  height: 50em;
+  padding-top: 22em;
+  color: white;
+
+  hr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  }
+
+  .reservationPageDescription {
+    width: 60%;
+    margin: auto;
+    padding-top: 0;
+    font-size: 1.5em;
+    margin-bottom: 2em;
+  }
+
+  .buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0;
+    padding-top: 0;
+  }
+}

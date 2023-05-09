@@ -22,8 +22,8 @@ const SideBar = () => {
 
   const navLinks = [
     { url: '/', name: 'Houses' },
-    { url: '/reserve', name: 'Reserve' },
-    { url: '/my_reservations', name: 'My Reservations' },
+    { url: '/booking', name: 'Reserve' },
+    { url: '/reservations', name: 'My Reservations' },
     { url: '/add_house', name: 'Add House' },
     { url: '/delete_house', name: 'Delete House' },
   ];
