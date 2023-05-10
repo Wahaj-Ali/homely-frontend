@@ -5,18 +5,18 @@ import './Reservations.scss';
 
 const Reservations = () => (
   <section>
-    <div className="myReservationsContainer">
+    <ul className="myReservationsContainer">
       {
         ReservationsData.map((item) => (
           <div className="list-items" key={item.id}>
-            <h5 className="city"><Link to={`${item.id}`}>{item.city}</Link></h5>
-            <p className="name">{item.name}</p>
-            <p className="date">{item.date}</p>
-            <button type="button" className="delete">Cancel Reservation</button>
+            <li className="city"><Link to={`${item.id}`}>{item.city}</Link></li>
+            <li className="name">{item.name}</li>
+            <li className="date">{item.date}</li>
+            <li><button type="button" className="delete">Cancel Reservation</button></li>
           </div>
         ))
       }
-    </div>
+    </ul>
   </section>
 
 );
