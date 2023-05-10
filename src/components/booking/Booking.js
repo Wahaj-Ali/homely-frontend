@@ -1,5 +1,4 @@
 import React from 'react';
-// import { AiOutlineRightCircle } from 'react-icons/ai';
 import './Booking.scss';
 import background from '../../images/house.jpeg';
 
@@ -8,8 +7,6 @@ const Booking = () => (
     className="myReservationPageContainer"
     style={{
       backgroundImage: `url(${background})`,
-      // opacity: '0.2',
-      greyscale: '0.9',
     }}
   >
     <h1>
