@@ -16,7 +16,7 @@ const Login = () => {
 
   useEffect(() => {
     // console.log('Token:', token);
-    if (isLoggedIn) {
+    if (token && isLoggedIn) {
       // console.log('logged in');
       setTimeout(() => {
         navigate('/');
