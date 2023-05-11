@@ -1,4 +1,4 @@
-// import React, { useState } from 'react';
+import React from 'react';
 import './SideBar.css';
 import {
   FaTwitter, FaFacebookF, FaVine, FaPinterestP,
@@ -20,9 +20,14 @@ const SideBar = () => {
   //   }
   // };
 
+  const token = localStorage.getItem('token');
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+  };
+
   const navLinks = [
     { url: '/', name: 'Houses' },
-    { url: '/login', name: 'Log In' },
     { url: '/my_reservations', name: 'My Reservations' },
     { url: '/add_house', name: 'Add House' },
     { url: '/delete_house', name: 'Delete House' },
@@ -41,6 +46,15 @@ const SideBar = () => {
               <Link to={url}>{name}</Link>
             </li>
           ))}
+          {token ? (
+            <li>
+              <button type="button" onClick={handleLogout}>Logout</button>
+            </li>
+          ) : (
+            <li>
+              <Link to="/login">Log In</Link>
+            </li>
+          )}
         </ul>
         <div className="footer">
           <div className="social">
