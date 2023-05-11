@@ -27,7 +27,7 @@ const SideBar = () => {
   const token = localStorage.getItem('token');
 
   const handleLogout = async () => {
-    dispatch(logoutUser());
+    await dispatch(logoutUser());
     setTimeout(() => {
       navigate('/');
     }, 100);
