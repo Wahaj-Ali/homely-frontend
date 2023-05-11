@@ -1,22 +1,32 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { FaUser } from 'react-icons/fa';
 import { HiOutlineMailOpen } from 'react-icons/hi';
 import { RiLockPasswordLine } from 'react-icons/ri';
 import { Link, useNavigate } from 'react-router-dom';
-import { login } from '../../Redux/Reducers/loginSlice';
+import { login } from '../../Redux/Reducers/authSlice';
 
 const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const isLoggedIn = useSelector((state) => state.auth.loggedIn);
+  const token = localStorage.getItem('token');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  useEffect(() => {
+    // console.log('Token:', token);
+    if (isLoggedIn) {
+      // console.log('logged in');
+      setTimeout(() => {
+        navigate('/');
+      }, 100);
+    }
+  }, [token, navigate]);
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    // const formData = new FormData(event.target);
-    // const email = formData.get('email');
-    // const password = formData.get('password');
+    console.log('Form submitted:', email, password);
     dispatch(login({ email, password }));
   };
 
