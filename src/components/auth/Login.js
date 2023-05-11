@@ -22,7 +22,7 @@ const Login = () => {
         navigate('/');
       }, 100);
     }
-  }, [token, navigate]);
+  }, [isLoggedIn, token, navigate]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
