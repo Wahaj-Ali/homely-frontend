@@ -5,7 +5,6 @@ import {
 } from 'react-icons/fa';
 import { TiSocialGooglePlus } from 'react-icons/ti';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 
 const SideBar = () => {
   // const [style, setStyle] = useState('menu');
@@ -21,15 +20,14 @@ const SideBar = () => {
   //   }
   // };
 
-  // const token = localStorage.getItem('token');
-  const isLoggedIn = useSelector((state) => state.auth.loggedIn);
+  const token = localStorage.getItem('token');
   const handleLogout = () => {
     localStorage.removeItem('token');
   };
 
   const navLinks = [
     { url: '/', name: 'Houses' },
-    isLoggedIn && { url: '/my_reservations', name: 'My Reservations' },
+    token && { url: '/my_reservations', name: 'My Reservations' },
     { url: '/add_house', name: 'Add House' },
     { url: '/delete_house', name: 'Delete House' },
   ].filter(Boolean);
@@ -47,7 +45,7 @@ const SideBar = () => {
               <Link to={url}>{name}</Link>
             </li>
           ))}
-          {isLoggedIn ? (
+          {token ? (
             <li>
               <button type="button" onClick={handleLogout}>Logout</button>
             </li>
