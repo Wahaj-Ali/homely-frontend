@@ -27,14 +27,10 @@ const SideBar = () => {
   const token = localStorage.getItem('token');
 
   const handleLogout = async () => {
-    try {
-      dispatch(logoutUser());
-      setTimeout(() => {
-        navigate('/');
-      }, 100);
-    } catch (error) {
-      console.error(error);
-    }
+    dispatch(logoutUser());
+    setTimeout(() => {
+      navigate('/');
+    }, 100);
   };
 
   const navLinks = [
