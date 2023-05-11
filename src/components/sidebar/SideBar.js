@@ -4,7 +4,9 @@ import {
   FaTwitter, FaFacebookF, FaVine, FaPinterestP,
 } from 'react-icons/fa';
 import { TiSocialGooglePlus } from 'react-icons/ti';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { logoutUser } from '../../Redux/Reducers/authSlice';
 
 const SideBar = () => {
   // const [style, setStyle] = useState('menu');
@@ -20,9 +22,19 @@ const SideBar = () => {
   //   }
   // };
 
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const token = localStorage.getItem('token');
-  const handleLogout = () => {
-    localStorage.removeItem('token');
+
+  const handleLogout = async () => {
+    try {
+      dispatch(logoutUser());
+      setTimeout(() => {
+        navigate('/');
+      }, 100);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const navLinks = [
