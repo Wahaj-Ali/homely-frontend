@@ -1,45 +1,44 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import './SideBar.css';
 import {
   FaTwitter, FaFacebookF, FaVine, FaPinterestP,
 } from 'react-icons/fa';
 import { TiSocialGooglePlus } from 'react-icons/ti';
-import { NavLink } from 'react-router-dom';
-import ReservationsPage from '../ReservationsPage';
+import { Link } from 'react-router-dom';
 
 const SideBar = () => {
-  const [style, setStyle] = useState('menu');
-  const [menuStatus, setMenuStatus] = useState('open');
+  // const [style, setStyle] = useState('menu');
+  // const [menuStatus, setMenuStatus] = useState('open');
 
-  const handleClick = () => {
-    if (menuStatus === 'open') {
-      setMenuStatus('close');
-      setStyle('menu active');
-    } else if (menuStatus === 'close') {
-      setMenuStatus('open');
-      setStyle('menu');
-    }
-  };
+  // const handleClick = () => {
+  //   if (menuStatus === 'open') {
+  //     setMenuStatus('close');
+  //     setStyle('menu active');
+  //   } else if (menuStatus === 'close') {
+  //     setMenuStatus('open');
+  //     setStyle('menu');
+  //   }
+  // };
 
   const navLinks = [
-    { url: '/houses', name: 'Houses' },
-    { url: '/reserve', name: 'Reserve' },
-    { url: '../ReservationsPage.js', name: 'My Reservations' },
+    { url: '/', name: 'Houses' },
+    { url: '/booking', name: 'Reserve' },
+    { url: '/reservations', name: 'My Reservations' },
     { url: '/add_house', name: 'Add House' },
     { url: '/delete_house', name: 'Delete House' },
   ];
 
   return (
     <div>
-      <button type="button" onClick={handleClick}>
-        menu
-      </button>
-      <div className={style}>
+      {/* <button type="button" onClick={handleClick}>
+        Menu
+      </button> */}
+      <div className="menu">
         <div className="logo">Homely</div>
         <ul>
           {navLinks.map(({ url, name }) => (
             <li key={name}>
-              <a href={url}>{name}</a>
+              <Link to={url}>{name}</Link>
             </li>
           ))}
         </ul>
