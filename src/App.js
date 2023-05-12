@@ -8,6 +8,7 @@ import SideBar from './components/sidebar/SideBar';
 import HousesDetails from './components/houses details/HouseDetails';
 import Houses from './components/houses/Houses';
 import Login from './components/auth/Login';
+import Register from './components/auth/Register';
 
 const SidebarLayout = () => (
   <>
@@ -23,6 +24,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route element={<SidebarLayout />}>
               <Route path="/" element={<Houses />} />
               <Route path="/:id" element={<HousesDetails />} />
