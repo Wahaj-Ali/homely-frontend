@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 import authReducer from './Reducers/authSlice';
-import houseReducer from './Reducers/houseSlice';
+import housesReducer from './Reducers/houseSlice';
+import houseReducer from './Reducers/houseDetailsSlice';
 
 const store = configureStore({
   reducer: {
     auth: authReducer,
-    houses: houseReducer,
+    houses: housesReducer,
+    houseDetail: houseReducer,
   },
 });
 
