@@ -11,7 +11,7 @@
     left: auto;
   }
 
-    .houses-imgs {
+  .houses-imgs {
     width: 500px;
     height: 380px;
     margin: 0 auto;
@@ -29,27 +29,27 @@
       }
     }
   }
-       .deleteCont {
-        // display: flex;
-        // flex-direction: row;
-      position: relative;
-      right: -400px;
-      left: 700px;
-      top:-240px;
-      bottom: 800px;
-      word-wrap: normal;
 
-      hr {
-        width: 30%;
-      }
+  .deleteCont {
+    // display: flex;
+    // flex-direction: row;
+    position: relative;
+    right: -400px;
+    left: 700px;
+    top: -240px;
+    bottom: 800px;
+    word-wrap: normal;
 
-      .submit {
-        border: 1px solid blue($color: #000000);
-        padding: 20px;
-        background-color: #e61111;
-        border-radius: 25px;
-        color: white;
-      }
-      }
+    hr {
+      width: 30%;
+    }
+
+    .submit {
+      border: 1px solid blue($color: #000);
+      padding: 20px;
+      background-color: #e61111;
+      border-radius: 25px;
+      color: white;
+    }
+  }
 }
-
