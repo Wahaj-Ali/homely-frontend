@@ -88,6 +88,10 @@
       // @extend %btn-properties;
       @extend %btn-color;
     }
+
+    .login-btn {
+      top: 20%;
+    }
   }
 
   p {
