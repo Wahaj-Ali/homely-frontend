@@ -3,22 +3,43 @@ import { FaUser, FaRegUser } from 'react-icons/fa';
 import { HiOutlineMailOpen } from 'react-icons/hi';
 import { RiLockPasswordLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { signUp } from '../../Redux/Reducers/regSlice';
-
+/* eslint-disable camelcase */
 const Register = () => {
   const dispatch = useDispatch();
-  const [fullName, setFullName] = useState('');
+  const [full_name, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const { status, error } = useSelector((state) => state.register) || {};
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(signUp({
       email,
-      fullName,
+      full_name,
       password,
     }));
+  };
+
+  const renderMessage = () => {
+    if (status === 'loading') {
+      return <p>Loading...</p>;
+    }
+
+    if (status === 'failed') {
+      return (
+        <p>
+          There was an error:
+          {error}
+        </p>
+      );
+    }
+
+    if (status === 'succeeded') {
+      return <p>Sign up successful!</p>;
+    }
+    return null;
   };
 
   return (
@@ -46,20 +67,9 @@ const Register = () => {
             id="name"
             placeholder="Enter full name"
             onChange={(e) => setFullName(e.target.value)}
-            value={fullName}
+            value={full_name}
           />
         </div>
-        {/* <div className="form-group">
-          <span className="icon"><FiPhoneCall /></span>
-          <input
-            type="tel"
-            className="form-control"
-            id="name"
-            placeholder="mobile Number"
-          onChange={(e) => setPhoneNumber(e.target.value)}
-          value={phoneNumber}
-          />
-        </div> */}
         <div className="form-group">
           <span className="icon"><RiLockPasswordLine /></span>
           <input
@@ -79,8 +89,8 @@ const Register = () => {
         <Link to="/login" style={{ textDecoration: 'none' }}>
           Login
         </Link>
-
       </p>
+      {renderMessage()}
     </section>
   );
 };
