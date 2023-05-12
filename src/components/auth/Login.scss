@@ -2,9 +2,7 @@
 
 .login-section,
 .login-register {
-  // @extend %main-properties;
-
-  // @include d-flex(space-between);
+ 
   display: flex;
   flex-direction: column;
   background-color: $background-color;
@@ -85,7 +83,6 @@
     }
 
     button {
-      // @extend %btn-properties;
       @extend %btn-color;
     }
 
