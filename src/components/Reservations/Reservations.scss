@@ -17,8 +17,8 @@
     width: 60%;
     margin: auto;
     list-style-type: none;
-    border: 1px solid;
-    border-bottom-color: 2px solid darkred;
+    border-bottom: 1px solid;
+    border-color: 2px solid darkred;
 
     .name {
       padding-bottom: 0;
@@ -46,7 +46,6 @@
       border-radius: 10px;
       margin-bottom: 50px;
       background-color: #e61111;
-
     }
   }
 }
