@@ -32,7 +32,7 @@ const HousesDetails = () => (
           <div className="iconColor">
             <img src={icon} alt="icon" />
           </div>
-          <Link to="/booking">
+          <Link to="/reserve">
             <button type="button" aria-label="Go back" className="reserve-btn">
               Book House
               <AiOutlineRightCircle />

@@ -37,7 +37,7 @@ const Booking = () => (
 
             {/* <br /> */}
 
-            <input className="submit" type="submit" value="Book House" />
+            <input className="submit" type="submit" value="Reserve House" />
           </form>
         </div>
       ))}
