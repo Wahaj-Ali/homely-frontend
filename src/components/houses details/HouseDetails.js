@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { IoCaretBackOutline } from 'react-icons/io5';
-import { AiOutlineRightCircle } from 'react-icons/ai';
+import { AiOutlineRightCircle, AiOutlineRight } from 'react-icons/ai';
 import { fetchHouseById } from '../../Redux/Reducers/houseDetailsSlice';
 import icon from '../../images/icon.png';
 import './HouseDetails.scss';
@@ -32,19 +32,23 @@ const HousesDetails = () => {
                   <p>City: </p>
                   <p>{house.city}</p>
                 </li>
-                <li className="first">
+                {/* <li className="first">
                   <p>State: </p>
-                  {/* <p>{housedetail.state}</p> */}
-                </li>
+                  <p>{housedetail.state}</p>
+                </li> */}
                 <li className="first">
+                  <p>Daily Rent:</p>
                   <p>
-                    Price:
+                    $
                     {house.appartment_fee}
                   </p>
-                  {/* <p>{housedetail.country}</p> */}
                 </li>
               </ul>
               <div className="iconColor">
+                <h4>
+                  DISCOVER MORE COLORS
+                  <AiOutlineRight />
+                </h4>
                 <img src={icon} alt="icon" />
               </div>
               <Link to="/reserve">
