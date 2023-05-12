@@ -93,6 +93,15 @@
     width: 100%;
     text-align: right;
 
+
+    h4 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 8px;
+      font-weight: 800;
+    }
+
     img {
       width: 80px;
       height: auto;
