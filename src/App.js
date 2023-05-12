@@ -17,8 +17,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Houses />} />
           <Route path="/:id" element={<HousesDetails />} />
-          <Route path="reservations" element={<Reservations />} />
-          <Route path="booking" element={<Booking />} />
+          <Route path="my_reservations" element={<Reservations />} />
+          <Route path="reserve" element={<Booking />} />
           <Route path="delete_house" element={<DeleteHouse />} />
         </Routes>
       </Router>
