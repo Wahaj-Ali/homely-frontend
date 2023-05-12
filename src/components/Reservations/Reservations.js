@@ -13,11 +13,11 @@ const Reservations = () => (
 
             <div className="date">
               <p className="startDate">
-                {item.from}
+                {item.startDate}
               </p>
               <p className="endDate">
                 -
-                {item.to}
+                {item.endDate}
               </p>
             </div>
             <p className="city">{item.city}</p>
