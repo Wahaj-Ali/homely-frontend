@@ -5,6 +5,7 @@ import { HiOutlineMailOpen } from 'react-icons/hi';
 import { RiLockPasswordLine } from 'react-icons/ri';
 import { Link, useNavigate } from 'react-router-dom';
 import { login } from '../../Redux/Reducers/authSlice';
+import './Login.scss';
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -31,7 +32,7 @@ const Login = () => {
   };
 
   return (
-    <section>
+    <section className="login-section">
       <div className="loginIcon"><FaUser /></div>
       <h2>Welcome back</h2>
 
@@ -61,7 +62,7 @@ const Login = () => {
           />
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit">Login</button>
       </form>
       <p>
         New here?
