@@ -13,6 +13,7 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { status, error } = useSelector((state) => state.register) || {};
+  const [isSignedUp, setIsSignedUp] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,6 +22,7 @@ const Register = () => {
       full_name,
       password,
     }));
+    setIsSignedUp(true);
   };
 
   const renderMessage = () => {
@@ -44,12 +46,13 @@ const Register = () => {
   };
 
   useEffect(() => {
-    if (status === 'succeeded') {
+    if (isSignedUp) {
       setTimeout(() => {
         navigate('/login');
+        setIsSignedUp(false);
       }, 100);
     }
-  }, [status, navigate]);
+  }, [isSignedUp, navigate]);
 
   return (
     <section className="login-register">
