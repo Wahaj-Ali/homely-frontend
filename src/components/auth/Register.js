@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaUser, FaRegUser } from 'react-icons/fa';
 import { HiOutlineMailOpen } from 'react-icons/hi';
 import { RiLockPasswordLine } from 'react-icons/ri';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { signUp } from '../../Redux/Reducers/regSlice';
 /* eslint-disable camelcase */
 const Register = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [full_name, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -41,6 +42,14 @@ const Register = () => {
     }
     return null;
   };
+
+  useEffect(() => {
+    if (status === 'succeeded') {
+      setTimeout(() => {
+        navigate('/login');
+      }, 100);
+    }
+  }, [status, navigate]);
 
   return (
     <section className="login-register">
