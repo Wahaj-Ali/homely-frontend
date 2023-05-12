@@ -5,7 +5,7 @@ import './App.css';
 import SideBar from './components/sidebar/SideBar';
 import HousesDetails from './components/houses details/HouseDetails';
 import Houses from './components/houses/Houses';
-import Reservations from './components/reservations/Reservations';
+import Reservations from './components/Reservations/Reservations';
 import Booking from './components/booking/Booking';
 import DeleteHouse from './components/DeleteHouse/DeleteHouse';
 
