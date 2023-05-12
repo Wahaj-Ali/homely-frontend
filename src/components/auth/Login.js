@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FaUser } from 'react-icons/fa';
 import { HiOutlineMailOpen } from 'react-icons/hi';
 import { RiLockPasswordLine } from 'react-icons/ri';
+import { IoCaretBackOutline } from 'react-icons/io5';
 import { Link, useNavigate } from 'react-router-dom';
 import { login } from '../../Redux/Reducers/authSlice';
 import './Login.scss';
@@ -62,7 +63,10 @@ const Login = () => {
           />
         </div>
 
-        <button type="submit">Login</button>
+        <button type="submit" className="login-btn">Login</button>
+        <Link to="/">
+          <button type="button" aria-label="Go back"><IoCaretBackOutline /></button>
+        </Link>
       </form>
       <p>
         New here?
