@@ -1,21 +1,37 @@
 import {
-  BrowserRouter as Router, Routes, Route,
+  BrowserRouter as Router, Routes, Route, Outlet,
 } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './Redux/store';
 import './App.css';
 import SideBar from './components/sidebar/SideBar';
 import HousesDetails from './components/houses details/HouseDetails';
 import Houses from './components/houses/Houses';
+import Login from './components/auth/Login';
+import Register from './components/auth/Register';
+
+const SidebarLayout = () => (
+  <>
+    <SideBar />
+    <Outlet />
+  </>
+);
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <SideBar />
-        <Routes>
-          <Route path="/" element={<Houses />} />
-          <Route path="/:id" element={<HousesDetails />} />
-        </Routes>
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route element={<SidebarLayout />}>
+              <Route path="/" element={<Houses />} />
+              <Route path="/:id" element={<HousesDetails />} />
+            </Route>
+          </Routes>
+        </Router>
+      </Provider>
     </div>
   );
 }
