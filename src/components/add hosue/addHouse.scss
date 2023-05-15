@@ -65,7 +65,7 @@
           color: $text-color;
         }
       }
-
+      // stylelint-disable-next-line no-descending-specificity
       textarea {
         border: none;
         height: 120px;
