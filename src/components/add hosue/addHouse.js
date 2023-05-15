@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { createHouse } from '../../Redux/Reducers/addHouseSlice';
+import './addHouse.scss';
 
 const AddHouse = () => {
   const dispatch = useDispatch();
@@ -33,7 +34,8 @@ const AddHouse = () => {
   };
 
   return (
-    <section className="add_house">
+    <section className="add_house_sec">
+      <h2>Add a House</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">
           Name:
@@ -44,7 +46,7 @@ const AddHouse = () => {
           <input type="text" name="city" value={formData.city} onChange={handleChange} />
         </label>
         <label htmlFor="image">
-          Image:
+          Image URL:
           <input type="text" name="image" value={formData.image} onChange={handleChange} />
         </label>
         <label htmlFor="appartment_fee">
@@ -55,7 +57,7 @@ const AddHouse = () => {
           Description:
           <textarea name="description" value={formData.description} onChange={handleChange} />
         </label>
-        <button type="submit">Add House</button>
+        <button type="submit" className="add-btn">Add House</button>
       </form>
     </section>
   );
