@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FaUser, FaRegUser } from 'react-icons/fa';
 import { HiOutlineMailOpen } from 'react-icons/hi';
 import { RiLockPasswordLine } from 'react-icons/ri';
+import { IoCaretBackOutline } from 'react-icons/io5';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { signUp } from '../../Redux/Reducers/regSlice';
@@ -93,7 +94,10 @@ const Register = () => {
             value={password}
           />
         </div>
-        <button type="submit">Register</button>
+        <button type="submit" className="login-btn">Register</button>
+        <Link to="/">
+          <button type="button" aria-label="Go back"><IoCaretBackOutline /></button>
+        </Link>
       </form>
       <p>
         Already have an account?
