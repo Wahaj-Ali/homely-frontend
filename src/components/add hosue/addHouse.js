@@ -6,6 +6,8 @@ import { BsFillHouseDoorFill } from 'react-icons/bs';
 import { FaCity } from 'react-icons/fa';
 import { BiCodeCurly } from 'react-icons/bi';
 import { AiFillDollarCircle } from 'react-icons/ai';
+import { IoCaretBackOutline } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 import { createHouse } from '../../Redux/Reducers/addHouseSlice';
 
 const AddHouse = () => {
@@ -104,6 +106,9 @@ const AddHouse = () => {
           <textarea name="description" value={formData.description} onChange={handleChange} placeholder="Description" />
         </div>
         <button type="submit" className="add-btn">Add House</button>
+        <Link to="/">
+          <button type="button" aria-label="Go back"><IoCaretBackOutline /></button>
+        </Link>
       </form>
     </section>
   );
