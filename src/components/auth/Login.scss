@@ -1,7 +1,6 @@
 @import './../scss/config';
 
-.login-section,
-.login-register {
+.login-section {
   display: flex;
   flex-direction: column;
   background-color: $background-color;
