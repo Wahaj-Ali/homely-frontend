@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { createHouse } from '../../Redux/Reducers/addHouseSlice';
 import './addHouse.scss';
+import { MdDescription } from 'react-icons/md';
+import { BsFillHouseDoorFill } from 'react-icons/bs';
+import { FaCity } from 'react-icons/fa';
+import { BiCodeCurly } from 'react-icons/bi';
+import { AiFillDollarCircle } from 'react-icons/ai';
+import { createHouse } from '../../Redux/Reducers/addHouseSlice';
 
 const AddHouse = () => {
   const dispatch = useDispatch();
@@ -37,26 +42,67 @@ const AddHouse = () => {
     <section className="add_house_sec">
       <h2>Add a House</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">
-          Name:
-          <input type="text" name="name" value={formData.name} onChange={handleChange} />
-        </label>
-        <label htmlFor="city">
-          City:
-          <input type="text" name="city" value={formData.city} onChange={handleChange} />
-        </label>
-        <label htmlFor="image">
-          Image URL:
-          <input type="text" name="image" value={formData.image} onChange={handleChange} />
-        </label>
-        <label htmlFor="appartment_fee">
-          Appointment Fee:
-          <input type="text" name="appartment_fee" value={formData.appartment_fee} onChange={handleChange} />
-        </label>
-        <label htmlFor="description">
-          Description:
-          <textarea name="description" value={formData.description} onChange={handleChange} />
-        </label>
+        <h4>Enter House Details</h4>
+        <div className="form-group">
+          <span className="icon"><BsFillHouseDoorFill /></span>
+          <input
+            type="text"
+            name="name"
+            className="form-control"
+            id="Email1"
+            placeholder="House Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <span className="icon"><FaCity /></span>
+          <input
+            type="text"
+            className="form-control"
+            name="city"
+            id="password"
+            placeholder="City"
+            onChange={handleChange}
+            value={formData.city}
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <span className="icon"><BiCodeCurly /></span>
+          <input
+            type="text"
+            className="form-control"
+            name="image"
+            id="image"
+            placeholder="Image URL"
+            onChange={handleChange}
+            value={formData.image}
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <span className="icon"><AiFillDollarCircle /></span>
+          <input
+            type="text"
+            className="form-control"
+            name="image"
+            id="image"
+            placeholder="Visit Fee"
+            onChange={handleChange}
+            value={formData.appartment_fee}
+            required
+          />
+        </div>
+
+        <div className="form-group">
+          <span className="icon"><MdDescription /></span>
+          <textarea name="description" value={formData.description} onChange={handleChange} placeholder="Description" />
+        </div>
         <button type="submit" className="add-btn">Add House</button>
       </form>
     </section>
