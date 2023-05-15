@@ -1,6 +1,7 @@
 @import './../scss/config';
 
-.login-section {
+.login-section,
+.login-register {
   display: flex;
   flex-direction: column;
   background-color: $background-color;
@@ -88,7 +89,7 @@
       position: inherit;
       border-top-left-radius: 50px;
       border-bottom-left-radius: 50px;
-      width: 4rem;
+      width: 4.5rem;
     }
   }
 
