@@ -9,6 +9,7 @@ import HousesDetails from './components/houses details/HouseDetails';
 import Houses from './components/houses/Houses';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
+import AddHouse from './components/add hosue/addHouse';
 
 const SidebarLayout = () => (
   <>
@@ -28,6 +29,7 @@ function App() {
             <Route element={<SidebarLayout />}>
               <Route path="/" element={<Houses />} />
               <Route path="/:id" element={<HousesDetails />} />
+              <Route path="/add_house" element={<AddHouse />} />
             </Route>
           </Routes>
         </Router>
