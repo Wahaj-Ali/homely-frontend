@@ -85,7 +85,10 @@
     }
 
     .login-btn {
-      top: 20%;
+      position: inherit;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      width: 4rem;
     }
   }
 
