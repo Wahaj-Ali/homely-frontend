@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './SideBar.css';
 import {
   FaTwitter, FaFacebookF, FaVine, FaPinterestP,
@@ -41,6 +41,20 @@ const SideBar = () => {
     { url: '/add_house', name: 'Add House' },
     { url: '/delete_house', name: 'Delete House' },
   ].filter(Boolean);
+
+  useEffect(() => {
+    const handleBeforeUnload = (event) => {
+      if (event.returnValue === null) {
+        localStorage.removeItem('token');
+      }
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
 
   return (
     <div>

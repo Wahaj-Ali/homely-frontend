@@ -9,6 +9,7 @@ import HousesDetails from './components/houses details/HouseDetails';
 import Houses from './components/houses/Houses';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
+import AddHouse from './components/add hosue/addHouse';
 
 const SidebarLayout = () => (
   <>
@@ -25,6 +26,7 @@ function App() {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/add_house" element={<AddHouse />} />
             <Route element={<SidebarLayout />}>
               <Route path="/" element={<Houses />} />
               <Route path="/:id" element={<HousesDetails />} />

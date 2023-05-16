@@ -1,7 +1,6 @@
 @import './../scss/config';
 
-.login-section,
-.login-register {
+.add_house_sec {
   display: flex;
   flex-direction: column;
   background-color: $background-color;
@@ -9,19 +8,9 @@
   align-items: center;
   height: 100vh;
 
-  .loginIcon svg {
-    width: 120px;
-    height: 120px;
-    border: none 1px transparent;
-    padding: 1.5rem;
-    background-color: #fff;
-    border-radius: 50%;
-    color: $secondary-color;
-  }
-
   h2 {
     font-size: 1.7rem;
-    font-weight: 400;
+    font-weight: 700;
     text-align: center;
     margin: 1rem auto 0.5rem;
     padding: 0;
@@ -38,6 +27,7 @@
       color: $primary-color;
       margin: 0.1rem auto 1rem;
       font-size: 1.5rem;
+      font-weight: 400;
     }
 
     .form-group {
@@ -60,7 +50,8 @@
         color: $secondary-color;
       }
 
-      input {
+      input,
+      textarea {
         width: 70%;
         height: 12%;
         padding: 0.5rem 1rem;
@@ -74,6 +65,12 @@
           color: $text-color;
         }
       }
+      // stylelint-disable-next-line no-descending-specificity
+      textarea {
+        border: none;
+        height: 120px;
+        width: 100%;
+      }
 
       &:focus {
         cursor: pointer;
@@ -85,15 +82,11 @@
       @extend %btn-color;
     }
 
-    .login-btn {
+    .add-btn {
       position: inherit;
       border-top-left-radius: 50px;
       border-bottom-left-radius: 50px;
-      width: 4.5rem;
+      width: 100px;
     }
-  }
-
-  p {
-    font-size: 1rem;
   }
 }
