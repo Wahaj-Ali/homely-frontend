@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { IoCaretBackOutline } from 'react-icons/io5';
@@ -59,15 +60,12 @@ const HousesDetails = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-          <Link to={`${housedetail.id}`}>
+          <Link to={`${house.id}`}>
             <button type="button" aria-label="Go back" className="reserve-btn">
               Book House
               <AiOutlineRightCircle />
             </button>
           </Link>
-=======
->>>>>>> ec9a105aeac1b7d77fe247b3600e9adffc6d8bc1
         </div>
       ) : (
         <div>Loading...</div> // Display a loading message while waiting for API call to complete

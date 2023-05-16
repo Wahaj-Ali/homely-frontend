@@ -21,7 +21,6 @@ const SidebarLayout = () => (
   </>
 );
 
-
 function App() {
   return (
     <div className="App">
@@ -36,9 +35,9 @@ function App() {
               <Route path="/:id" element={<HousesDetails />} />
             </Route>
             <Route path="my_reservations" element={<Reservations />} />
-          <Route path="reserve" element={<Booking />} />
-          <Route path="delete_house" element={<DeleteHouse />} />
-        </Routes>
+            <Route path="reserve" element={<Booking />} />
+            <Route path="delete_house" element={<DeleteHouse />} />
+          </Routes>
         </Router>
       </Provider>
     </div>
