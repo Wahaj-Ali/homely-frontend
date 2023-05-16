@@ -4,7 +4,7 @@ import axios from 'axios';
 // Async thunk action to create a new reservation
 export const createReservation = createAsyncThunk(
   'reservations/createReservation',
-  async ({ userId,houseId, reservationDate }) => {
+  async ({ userId, houseId, reservationDate }) => {
     try {
       const response = await axios.post(`http://localhost:4000/api/v1/users/${userId}/reservations`, {
         user_id: userId,
