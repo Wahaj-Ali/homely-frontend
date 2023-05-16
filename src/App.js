@@ -10,6 +10,7 @@ import Houses from './components/houses/Houses';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import AddHouse from './components/add hosue/addHouse';
+import reservationConfirmation from './components/reservation confirmation/reservationConfirmation';
 
 const SidebarLayout = () => (
   <>
@@ -30,6 +31,7 @@ function App() {
             <Route element={<SidebarLayout />}>
               <Route path="/" element={<Houses />} />
               <Route path="/:id" element={<HousesDetails />} />
+              <Route path="/reservation/:id" component={reservationConfirmation} />
             </Route>
           </Routes>
         </Router>
