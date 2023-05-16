@@ -9,9 +9,9 @@ export const deleteHouse = createAsyncThunk('houses/create', async (formData) =>
 });
 
 const deleteHouseSlice = createSlice({
-  name: 'houses',
+  name: 'reservation',
   initialState: {
-    houses: [],
+    reservations: [],
     isLoading: false,
     error: null,
   },
@@ -22,7 +22,7 @@ const deleteHouseSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(deleteHouse.fulfilled, (state, action) => {
-        state.houses.push(action.payload);
+        state.reservation.filter(action.payload);
         state.isLoading = false;
         state.error = null;
       })
