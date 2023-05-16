@@ -1,6 +1,7 @@
 @import './../scss/config';
 
 .DeleteHouseContainer {
+  padding-top: 80px;
   margin-left: 200px;
 
   .back-btn {
@@ -31,13 +32,7 @@
   }
 
   .deleteCont {
-    // display: flex;
-    // flex-direction: row;
-    position: relative;
-    right: -400px;
-    left: 700px;
-    top: -240px;
-    bottom: 800px;
+    padding-bottom: 80px;
     word-wrap: normal;
 
     hr {
