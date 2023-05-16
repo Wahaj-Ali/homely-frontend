@@ -9,10 +9,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { useDispatch, useSelector } from 'react-redux';
-import styles from './Houses.scss';
-import { fetchHouses } from '../../Redux/Reducers/deleteHouseSlice';
+import styles from './deleteHouse.scss';
+import { fetchHouses, deleteHouse } from '../../Redux/Reducers/deleteHouseSlice';
 
-const deleteHouse = () => {
+const DeleteHouse = () => {
   const dispatch = useDispatch();
   const houses = useSelector((state) => state.houses.houses);
   const status = useSelector((state) => state.houses.status);
@@ -23,10 +23,16 @@ const deleteHouse = () => {
     }
   }, [dispatch, status]);
 
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(deleteHouse());
+    }
+  }, [dispatch, status]);
+
   return (
     <section className="house-sec">
       <h2>MY RESERVED HOUSES</h2>
-      <h3 className="email">Here's your collection</h3>
+      <h3 className="email">Heare are your collections</h3>
       <input type="button" className="delete" />
       {status === 'loading' && <div>Loading...</div>}
       {status === 'succeeded' && (
@@ -56,4 +62,4 @@ const deleteHouse = () => {
   );
 };
 
-export default Houses;
+export default DeleteHouse;

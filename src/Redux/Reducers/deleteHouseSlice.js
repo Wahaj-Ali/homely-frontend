@@ -27,7 +27,7 @@ export const deleteHouse = createAsyncThunk(
       console.error('Error deleting item:', error);
       throw error;
     }
-  }
+  },
 );
 
 const deleteHouseSlice = createSlice({
@@ -47,9 +47,9 @@ const deleteHouseSlice = createSlice({
         state.status = 'succeeded';
         state.houses = action.payload;
       })
-    .addCase(deleteHouse.fulfilled, (state, action) => {
-       state.status = 'succeeded';
-       state.houses = action.payload;
+      .addCase(deleteHouse.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        state.houses = action.payload;
       })
       .addCase(fetchHouses.rejected, (state, action) => {
         state.status = 'failed';
@@ -57,6 +57,5 @@ const deleteHouseSlice = createSlice({
       });
   },
 });
-
 
 export default deleteHouseSlice.reducer;
