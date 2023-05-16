@@ -1,36 +1,21 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+// import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { useState } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import axios from 'axios';
 
-export const deleteHouse = createAsyncThunk('houses/create', async (formData) => {
-  const response = await axios.post('http://localhost:4000/api/v1/houses', { house: formData });
-  return response.data;
+const client = axios.create({
+  baseURL: 'http://localhost:4000/api/v1/houses',
 });
 
-const deleteHouseSlice = createSlice({
-  name: 'reservation',
-  initialState: {
-    reservations: [],
-    isLoading: false,
-    error: null,
-  },
-  reducers: {},
-  extraReducers: (builder) => {
-    builder
-      .addCase(deleteHouse.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(deleteHouse.fulfilled, (state, action) => {
-        state.reservation.filter(action.payload);
-        state.isLoading = false;
-        state.error = null;
-      })
-      .addCase(deleteHouse.rejected, (state, action) => {
-        state.isLoading = false;
-        state.error = action.error.message;
-      });
-  },
-});
+const DeleteHouseSlice = (id) => {
+  const [house, setHouse] = useState([]);
 
-export default deleteHouseSlice.reducer;
+  // DELETE with Axios
+  client.delete(`${id}`);
+  setHouse(
+    house.filter((house) => house.id !== id),
+  );
+};
+
+export default DeleteHouseSlice.reducer;

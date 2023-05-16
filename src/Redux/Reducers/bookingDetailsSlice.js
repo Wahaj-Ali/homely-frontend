@@ -4,7 +4,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchReservationById = createAsyncThunk('houses/fetchReservationById', async (id) => {
-  const response = await axios.get(`http://localhost:4000/api/v1/houses/${id}`);
+  const response = await axios.get(`http://localhost:4000/api/v1/reservation/${id}`);
   return response.data;
 });
 

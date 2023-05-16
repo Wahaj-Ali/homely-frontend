@@ -1,26 +1,15 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-// import { ReservationsData } from '../../mockData';
+import { ReservationsData } from '../../mockData';
 import './Reservations.scss';
-import { fetchReservations } from '../../Redux/Reducers/reservationsSlice';
+// import { fetchReservations } from '../../Redux/Reducers/reservationsSlice';
 
-const Reservations = () => {
-  const dispatch = useDispatch();
-  const reservations = useSelector((state) => state.reservations.reservations);
-  const status = useSelector((state) => state.reservations.status);
-
-  useEffect(() => {
-    if (status === 'idle') {
-      dispatch(fetchReservations());
-    }
-  }, [dispatch, status]);
-
-  return (
-    <section>
-      <div className="myReservationsContainer">
-        {
-        reservations.map((item) => (
+const Reservations = () => (
+  <section>
+    <div className="myReservationsContainer">
+      {
+        ReservationsData.map((item) => (
           <div className="list-items" key={item.id}>
             <h1 className="name"><Link to={`${item.id}`}>{item.name}</Link></h1>
 
@@ -38,10 +27,8 @@ const Reservations = () => {
           </div>
         ))
       }
-      </div>
-    </section>
+    </div>
+  </section>
 
-  );
-};
-
+);
 export default Reservations;
