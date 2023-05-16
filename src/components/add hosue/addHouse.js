@@ -92,8 +92,8 @@ const AddHouse = () => {
           <input
             type="text"
             className="form-control"
-            name="image"
-            id="image"
+            name="appartment_fee"
+            id="appartment_fee"
             placeholder="Visit Fee"
             onChange={handleChange}
             value={formData.appartment_fee}
