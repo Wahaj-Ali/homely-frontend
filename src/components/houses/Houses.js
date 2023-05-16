@@ -10,7 +10,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './Houses.scss';
-import { fetchHouses } from '../../Redux/Reducers/houseSlice';
 
 const Houses = () => {
   const dispatch = useDispatch();

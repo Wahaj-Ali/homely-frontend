@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { IoCaretBackOutline } from 'react-icons/io5';
 import { AiOutlineRightCircle, AiOutlineRight } from 'react-icons/ai';
-import { fetchHouseById } from '../../Redux/Reducers/houseDetailsSlice';
 import icon from '../../images/icon.png';
 import './HouseDetails.scss';
 
