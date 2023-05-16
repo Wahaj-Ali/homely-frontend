@@ -7,9 +7,11 @@ export const createReservation = createAsyncThunk(
   async ({ userId, houseId, reservationDate }) => {
     try {
       const response = await axios.post(`http://localhost:4000/api/v1/users/${userId}/reservations`, {
-        user_id: userId,
-        house_id: houseId,
-        reservation_date: reservationDate,
+        reservation: {
+          user_id: userId,
+          house_id: houseId,
+          reservation_date: reservationDate,
+        },
       });
       return response.data;
     } catch (error) {
