@@ -27,7 +27,15 @@ const Booking = () => (
                   placeholder="Choose Start Date"
                 />
               </li>
+              <li>
+                <DatePicker
+                  format="DD/MM/YYYY"
+                  placeholder="Choose End Date"
+                />
+              </li>
             </ul>
+
+            {/* <br /> */}
 
             <input className="submit" type="submit" value="Reserve House" />
           </form>

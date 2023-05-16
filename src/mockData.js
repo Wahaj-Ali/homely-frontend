@@ -40,7 +40,8 @@ export const ReservationsData = [
     image: '/src/images/house.jpg',
     description: 'Yellow Concrete House.',
     city: 'Australia',
-    date: '2011-02-02',
+    startDate: '2011-02-02',
+    endDate: '2022-09-12',
   },
   {
     id: 2,
@@ -48,7 +49,8 @@ export const ReservationsData = [
     image: '/src/images/house.jpg',
     description: 'White and Red Wooden House With Fence.',
     city: 'Nigeria',
-    date: '2011-02-02',
+    startDate: '2011-02-02',
+    endDate: '2022-09-12',
   },
   {
     id: 3,
@@ -56,7 +58,8 @@ export const ReservationsData = [
     image: '/src/images/house.jpg',
     description: 'Beautiful House in Australia.',
     city: 'Canada',
-    date: '2011-02-02',
+    startDate: '2011-02-02',
+    endDate: '2022-09-1',
   },
   {
     id: 4,
@@ -64,15 +67,7 @@ export const ReservationsData = [
     image: '/src/images/house.jpg',
     description: 'Beautiful House in Australia. One of the best places you can find here in Australia.',
     city: 'USA',
-    date: '2011-02-02',
+    startDate: '2011-02-02',
+    endDate: '2022-09-12',
   },
 ];
-
-export const bookingDetail = {
-  id: 1,
-  name: 'House 1',
-  image: '/src/images/house.jpg',
-  description: 'White and Red Wooden House With Fence.',
-  city: 'Nigeria',
-  date: '2011-02-02',
-};
