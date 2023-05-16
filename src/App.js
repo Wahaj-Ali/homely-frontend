@@ -10,6 +10,9 @@ import Houses from './components/houses/Houses';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import AddHouse from './components/add hosue/addHouse';
+import Reservations from './components/Reservations/Reservations';
+import Booking from './components/booking/Booking';
+import DeleteHouse from './components/DeleteHouse/DeleteHouse';
 
 const SidebarLayout = () => (
   <>
@@ -17,9 +20,7 @@ const SidebarLayout = () => (
     <Outlet />
   </>
 );
-import Reservations from './components/Reservations/Reservations';
-import Booking from './components/booking/Booking';
-import DeleteHouse from './components/DeleteHouse/DeleteHouse';
+
 
 function App() {
   return (
