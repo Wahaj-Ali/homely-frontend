@@ -1,5 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import axios from 'axios';
 
 export const fetchReservationById = createAsyncThunk('houses/fetchReservationsById', async (id) => {

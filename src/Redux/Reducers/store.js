@@ -1,21 +1,14 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { configureStore } from '@reduxjs/toolkit';
-import authReducer from './Reducers/authSlice';
-import housesReducer from './Reducers/houseSlice';
-import houseReducer from './Reducers/houseDetailsSlice';
-import signUpReducer from './Reducers/regSlice';
-import addHouseReducer from './Reducers/addHouseSlice';
+// eslint-disable-next-line import/extensions
 import deleteHouseReducer from './Reducers/deleteHouseSlice';
+// eslint-disable-next-line import/extensions
 import reservationReducer from './Reducers/reservationSlice';
 // eslint-disable-next-line import/extensions
 import reservationsReducer from './Reducers/reservationsSlice';
 
 const store = configureStore({
   reducer: {
-    auth: authReducer,
-    register: signUpReducer,
-    houses: housesReducer,
-    houseDetail: houseReducer,
-    addHouse: addHouseReducer,
     deleteHouse: deleteHouseReducer,
     reservation: reservationReducer,
     reservations: reservationsReducer,
