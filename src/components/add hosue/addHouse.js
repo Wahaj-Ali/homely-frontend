@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import './addHouse.scss';
 import { MdDescription } from 'react-icons/md';
@@ -7,11 +7,14 @@ import { FaCity } from 'react-icons/fa';
 import { BiCodeCurly } from 'react-icons/bi';
 import { AiFillDollarCircle } from 'react-icons/ai';
 import { IoCaretBackOutline } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { createHouse } from '../../Redux/Reducers/addHouseSlice';
 
 const AddHouse = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [isHouseAdded, setIsHouseAdded] = useState(false);
+
   const [formData, setFormData] = useState({
     name: '',
     city: '',
@@ -38,7 +41,17 @@ const AddHouse = () => {
       appartment_fee: '',
       description: '',
     });
+    setIsHouseAdded(true);
   };
+
+  useEffect(() => {
+    if (isHouseAdded) {
+      setTimeout(() => {
+        navigate('/');
+        setIsHouseAdded(false);
+      }, 100);
+    }
+  }, [isHouseAdded, navigate]);
 
   return (
     <section className="add_house_sec">
@@ -92,8 +105,8 @@ const AddHouse = () => {
           <input
             type="text"
             className="form-control"
-            name="image"
-            id="image"
+            name="appartment_fee"
+            id="appartment_fee"
             placeholder="Visit Fee"
             onChange={handleChange}
             value={formData.appartment_fee}
