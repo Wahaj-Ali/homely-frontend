@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { IoCaretBackOutline } from 'react-icons/io5';
 import {
   Navigation, A11y,
 } from 'swiper';
@@ -31,9 +32,8 @@ const DeleteHouse = () => {
 
   return (
     <section className="house-sec">
-      <h2>MY RESERVED HOUSES</h2>
-      <h3 className="email">Heare are your collections</h3>
-      <input type="button" className="delete" />
+      <h2>ADDED HOUSES</h2>
+      <h3 className="email">My house collections</h3>
       {status === 'loading' && <div>Loading...</div>}
       {status === 'succeeded' && (
         <Swiper
@@ -52,12 +52,15 @@ const DeleteHouse = () => {
                 <h5 className={styles.name}><Link to={`${item.id}`}>{item.name}</Link></h5>
                 <div className="points">....................</div>
                 <p className="email">{item.description}</p>
-                <input type="button" className="delete" />
+                <input type="button" className="delete" onClick={deleteHouse} />
               </SwiperSlide>
             ))
           }
         </Swiper>
       )}
+      <Link to="/">
+        <button type="button" aria-label="Go back" className="back-btn"><IoCaretBackOutline /></button>
+      </Link>
     </section>
   );
 };
