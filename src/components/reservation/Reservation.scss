@@ -1,0 +1,45 @@
+@import './../scss/config';
+
+.reservation_sec {
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  justify-content: flex-start;
+  align-items: center;
+
+  .title {
+    color: $text-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+  }
+
+  hr {
+    width: 50%;
+  }
+
+  P {
+    color: $text-color;
+  }
+
+  .react-datepicker-wrapper {
+    div {
+      input {
+        border-radius: 5rem;
+      }
+    }
+  } 
+
+  .react-datepicker__tab-loop {
+    position: absolute !important;
+    top: 0 !important;
+    right: 50% !important;
+    // .react-datepicker-popper {
+    //   transform: translate3d(250%, 215.4px, 0)!important;
+    // }
+  }
+  
+}
