@@ -32,3 +32,47 @@ export const housedetail = {
   description: 'Yellow Concrete House.',
   city: 'Australia',
 };
+
+export const ReservationsData = [
+  {
+    id: 1,
+    name: 'House 1',
+    image: '/src/images/house.jpg',
+    description: 'Yellow Concrete House.',
+    city: 'Australia',
+    date: '2011-02-02',
+  },
+  {
+    id: 2,
+    name: 'House 2',
+    image: '/src/images/house.jpg',
+    description: 'White and Red Wooden House With Fence.',
+    city: 'Nigeria',
+    date: '2011-02-02',
+  },
+  {
+    id: 3,
+    name: 'House 3',
+    image: '/src/images/house.jpg',
+    description: 'Beautiful House in Australia.',
+    city: 'Canada',
+    date: '2011-02-02',
+  },
+  {
+    id: 4,
+    name: 'House 4',
+    image: '/src/images/house.jpg',
+    description: 'Beautiful House in Australia. One of the best places you can find here in Australia.',
+    city: 'USA',
+    date: '2011-02-02',
+  },
+];
+
+export const bookingDetail = {
+  id: 1,
+  name: 'House 1',
+  image: '/src/images/house.jpg',
+  description: 'White and Red Wooden House With Fence.',
+  city: 'Nigeria',
+  date: '2011-02-02',
+};

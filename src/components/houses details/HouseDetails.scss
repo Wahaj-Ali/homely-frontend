@@ -26,7 +26,7 @@
   // background-color: $background-color;
 
   img {
-    width: 550px;
+    // width: 100%;
     // aspect-ratio: 16/ 9;
     height: 100%;
   }
@@ -92,14 +92,6 @@
   .iconColor {
     width: 100%;
     text-align: right;
-
-    h4 {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      font-size: 8px;
-      font-weight: 800;
-    }
 
     img {
       width: 80px;

@@ -1,0 +1,51 @@
+
+@import './../scss/config';
+
+.myReservationsContainer {
+  display: flex;
+  flex-direction: column;
+
+  .date {
+    display: flex;
+    justify-content: center;
+  }
+
+  .list-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+    margin: auto;
+    list-style-type: none;
+    border-bottom: 1px solid;
+    border-color: darkred;
+
+    .name {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      font-size: 42px;
+    }
+
+    .date {
+      display: flex;
+      // flex-direction: column;
+      font-size: 12px;
+      padding: 0;
+    }
+
+    .city {
+      font-size: 32px;
+      padding-bottom: 30px;
+    }
+
+    .delete {
+      position: relative;
+      top: 50%;
+      width: 155px;
+      left: 10px;
+      border-radius: 10px;
+      margin-bottom: 50px;
+      background-color: #e61111;
+    }
+  }
+}
