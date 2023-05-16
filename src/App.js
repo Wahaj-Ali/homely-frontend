@@ -28,10 +28,10 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/add_house" element={<AddHouse />} />
+            <Route path="/reservation/:id" element={<Reservation />} />
             <Route element={<SidebarLayout />}>
               <Route path="/" element={<Houses />} />
               <Route path="/:id" element={<HousesDetails />} />
-              <Route path="/reservation/:id" element={<Reservation />} />
             </Route>
           </Routes>
         </Router>
