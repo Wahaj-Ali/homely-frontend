@@ -1,12 +1,24 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
 import { IoCaretBackOutline } from 'react-icons/io5';
-// eslint-disable-next-line import/no-extraneous-dependencies
+import { AiOutlineRightCircle, AiOutlineRight } from 'react-icons/ai';
+import { fetchHouseById } from '../../Redux/Reducers/houseDetailsSlice';
 import DatePicker from 'react-multi-date-picker';
 import './Booking.scss';
 import { bookingDetail } from '../../mockData';
 
-const bookingDetails = () => (
+const bookingDetails = () => {
+  const { id } = useParams();
+  const dispatch = useDispatch();
+  const reservation = useSelector((state) => state.reservationDetail.house);
+
+  return (
+  useEffect(() => {
+    dispatch(fetchReservationById(id));
+  }, [dispatch, id]);
+
   <div className="myReservationPageContainer">
 
     <div className="bookingSelect">
@@ -38,5 +50,10 @@ const bookingDetails = () => (
       </Link>
     </div>
   </div>
-);
+  );
+};
+
+HousesDetails.propTypes = {
+  id: PropTypes.string.isRequired,
+}.isRequired;
 export default bookingDetails;
