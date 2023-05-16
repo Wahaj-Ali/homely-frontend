@@ -6,7 +6,7 @@ import DatePicker from 'react-multi-date-picker';
 import './Booking.scss';
 // import background from '../../images/house.jpg';
 // import loadingGif from '../../images/loading.gif';
-// import { houseData } from '../../mockData';
+import { houseData } from '../../mockData';
 
 const Booking = () => (
   <div className="myReservationPageContainer">

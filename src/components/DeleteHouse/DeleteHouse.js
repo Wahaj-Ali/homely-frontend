@@ -17,10 +17,9 @@ const DeleteHouse = () => {
     description: '',
   });
 
-
   const handleDelete = (e) => {
     e.preventDefault();
-    dispatch(createHouse(formData));
+    dispatch(deleteHouse(formData));
     setFormData({
       name: '',
       city: '',
@@ -42,7 +41,7 @@ const DeleteHouse = () => {
               <h1 className={styles.name}><Link to={`${item.id}`}>{item.name}</Link></h1>
               <hr />
               <p className="desription">{item.description}</p>
-              <input className="submit" type="submit" value="Delete House"  onSubmit={handleDelete}/>
+              <input className="submit" type="submit" value="Delete House" onSubmit={handleDelete} />
             </div>
           </div>
         ))}

@@ -6,6 +6,7 @@ import signUpReducer from './Reducers/regSlice';
 import addHouseReducer from './Reducers/addHouseSlice';
 import deleteHouseReducer from './Reducers/deleteHouseSlice';
 import reservationReducer from './Reducers/reservationSlice';
+// eslint-disable-next-line import/extensions
 import reservationsReducer from './Reducers/reservationsSlice';
 
 const store = configureStore({

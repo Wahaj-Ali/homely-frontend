@@ -1,4 +1,4 @@
-
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
