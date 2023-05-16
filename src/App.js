@@ -3,6 +3,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import { Provider } from 'react-redux';
+import store from './Redux/store';
 import SideBar from './components/sidebar/SideBar';
 import HousesDetails from './components/houses details/HouseDetails';
 import Houses from './components/houses/Houses';
@@ -12,7 +13,7 @@ import Booking from './components/booking/Booking';
 function App() {
   return (
     <div className="App">
-      <Provider>
+      <Provider store={store}>
         <Router>
           <SideBar />
           <Routes>

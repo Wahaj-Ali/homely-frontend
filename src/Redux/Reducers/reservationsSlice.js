@@ -9,9 +9,9 @@ export const fetchReservations = createAsyncThunk('reservations/fetchReservation
 });
 
 const reservationsSlice = createSlice({
-  name: 'houses',
+  name: 'reservations',
   initialState: {
-    houses: [],
+    reservations: [],
     status: 'idle',
     error: null,
   },
