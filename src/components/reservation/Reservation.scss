@@ -21,15 +21,34 @@
     width: 50%;
   }
 
-  P {
+  p {
     color: $text-color;
+  }
+
+  .confirm-input {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+  }
+
+  .book-btn {
+    position: inherit;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 150px;
+    background-color: $text-color;
+    color: $secondary-color;
+    font-weight: 700;
   }
 
   .react-datepicker-wrapper {
     div {
       input {
+        width: 200px;
+        height: 30px;
         border-radius: 5rem;
       }
     }
-  } 
+  }
 }
