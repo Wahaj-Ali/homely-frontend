@@ -21,27 +21,25 @@ const SidebarLayout = () => (
   </>
 );
 
-function App() {
-  return (
-    <div className="App">
-      <Provider store={store}>
-        <Router>
-          <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/add_house" element={<AddHouse />} />
-            <Route path="/delete_house" element={<DeleteHouse />} />
-            <Route path="/reservation/:id" element={<Reservation />} />
-            <Route path="/my_reservations" element={<MyReservations />} />
-            <Route element={<SidebarLayout />}>
-              <Route path="/" element={<Houses />} />
-              <Route path="/:id" element={<HousesDetails />} />
-            </Route>
-          </Routes>
-        </Router>
-      </Provider>
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <Provider store={store}>
+      <Router>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/add_house" element={<AddHouse />} />
+          <Route path="/delete_house" element={<DeleteHouse />} />
+          <Route path="/reservation/:id" element={<Reservation />} />
+          <Route path="/my_reservations" element={<MyReservations />} />
+          <Route element={<SidebarLayout />}>
+            <Route path="/" element={<Houses />} />
+            <Route path="/:id" element={<HousesDetails />} />
+          </Route>
+        </Routes>
+      </Router>
+    </Provider>
+  </div>
+);
 
 export default App;
