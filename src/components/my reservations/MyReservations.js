@@ -8,6 +8,7 @@ const ReservationList = () => {
   const reservations = useSelector((state) => state.reservations.reservations);
   const loading = useSelector((state) => state.reservations.loading);
   const error = useSelector((state) => state.reservations.error);
+  const house = useSelector((state) => state.houseDetail.house);
 
   useEffect(() => {
     dispatch(fetchReservations(userId));
@@ -36,12 +37,8 @@ const ReservationList = () => {
             {reservation.reservation_date}
           </p>
           <p>
-            House ID:
-            {reservation.house_id}
-          </p>
-          <p>
             House Name:
-            {reservation.house_name}
+            {house.name}
           </p>
         </div>
       ))}
