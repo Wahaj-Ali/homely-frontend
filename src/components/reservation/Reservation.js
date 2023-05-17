@@ -55,7 +55,10 @@ const Reservation = () => {
             <hr />
           </div>
           <div>
-            <p>Please Select a date of your visit.</p>
+            <p>
+              If you wish to visit the house,
+              please select the selector below to choose a date.
+            </p>
             <div className="confirm-input">
               <DatePicker
                 selected={selectedDate}
