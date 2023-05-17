@@ -4,11 +4,11 @@ import { IoCaretBackOutline } from 'react-icons/io5';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './deleteHouse.scss';
 import { fetchHouses, deleteHouse } from '../../Redux/Reducers/deleteHouseSlice';
-import { houseData } from '../../mockData';
+// import { houseData } from '../../mockData';
 
 const DeleteHouse = () => {
   const dispatch = useDispatch();
-  // const houses = useSelector((state) => state.houses.houses);
+  const houses = useSelector((state) => state.houses.houses);
   const status = useSelector((state) => state.houses.status);
 
   useEffect(() => {
@@ -28,22 +28,31 @@ const DeleteHouse = () => {
       <h2>ADDED HOUSES</h2>
       <h3>My house collections</h3>
       <div className="list-cont">
-        <table>
-          {
-        houseData.map((item) => (
-          // eslint-disable-next-line react/jsx-key
-          <tr>
-            <td className={styles.name}>
-              {item.name}
-              <input type="button" className="delete" onClick={deleteHouse} value="Delete" />
-            </td>
-          </tr>
-        ))
-      }
-        </table>
+        {status === 'loading' && <div>Loading...</div>}
+        {status === 'succeeded' && (
+          <table className="stripped-table">
+            <tbody>
+              {houses.map((item) => (
+                <tr key={item.id}>
+                  <td className={styles.name}>
+                    {item.name}
+                    <input
+                      type="button"
+                      className="delete-btn"
+                      onClick={() => deleteHouse(item.id)}
+                      value="Delete"
+                    />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
       </div>
       <Link to="/">
-        <button type="button" aria-label="Go back" className="back-btn"><IoCaretBackOutline /></button>
+        <button type="button" aria-label="Go back" className="back-btn">
+          <IoCaretBackOutline />
+        </button>
       </Link>
     </section>
   );
