@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { IoCaretBackOutline } from 'react-icons/io5';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './deleteHouse.scss';
-// import { fetchHouses } from '../../Redux/Reducers/deleteHouseSlice';
 import { deleteHouse } from '../../Redux/Reducers/addHouseSlice';
+import { fetchHouses } from '../../Redux/Reducers/houseSlice';
 
 const DeleteHouse = () => {
   const dispatch = useDispatch();
   const houses = useSelector((state) => state.houses.houses);
   const status = useSelector((state) => state.houses.status);
+
+  useEffect(() => {
+    dispatch(fetchHouses());
+  }, [dispatch]);
 
   const handleDelete = (houseId) => {
     dispatch(deleteHouse(houseId))
