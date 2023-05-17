@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchReservations } from '../../Redux/Reducers/reservationsSlice';
+import { fetchHouseById } from '../../Redux/Reducers/houseDetailsSlice';
 import './MyReservations.scss';
 
 const ReservationList = () => {
@@ -9,11 +10,17 @@ const ReservationList = () => {
   const reservations = useSelector((state) => state.reservations.reservations);
   const loading = useSelector((state) => state.reservations.loading);
   const error = useSelector((state) => state.reservations.error);
-  const house = useSelector((state) => state.houseDetail.house);
+  const houses = useSelector((state) => state.houses.houses);
 
   useEffect(() => {
     dispatch(fetchReservations(userId));
   }, [dispatch, userId]);
+
+  useEffect(() => {
+    reservations.forEach((reservation) => {
+      dispatch(fetchHouseById(reservation.house_id));
+    });
+  }, [dispatch, reservations]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -23,10 +30,16 @@ const ReservationList = () => {
     return (
       <div>
         Error:
+        {' '}
         {error}
       </div>
     );
   }
+
+  const getHouseName = (houseId) => {
+    const house = houses.find((h) => h.id === houseId);
+    return house ? house.name : 'Loading...';
+  };
 
   return (
     <div>
@@ -35,11 +48,18 @@ const ReservationList = () => {
         <div key={reservation.id} className="reservation-details">
           <p>
             Visit Date:
+            {' '}
             {reservation.reservation_date}
           </p>
           <p>
+            House ID:
+            {' '}
+            {reservation.house_id}
+          </p>
+          <p>
             House Name:
-            {house.name}
+            {' '}
+            {getHouseName(reservation.house_id)}
           </p>
         </div>
       ))}
