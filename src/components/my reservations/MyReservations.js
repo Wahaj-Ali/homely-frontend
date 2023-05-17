@@ -49,16 +49,12 @@ const ReservationList = () => {
         <h2>Your Reservations</h2>
         <div className="headings">
           <p>Visit Date</p>
-          <p>House ID</p>
           <p>House Name</p>
         </div>
         {reservations.map((reservation) => (
           <div key={reservation.id} className="reservation-details">
             <p>
               {reservation.reservation_date}
-            </p>
-            <p>
-              {reservation.house_id}
             </p>
             <p>
               {getHouseName(reservation.house_id)}
