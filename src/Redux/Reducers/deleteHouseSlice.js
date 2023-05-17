@@ -18,13 +18,14 @@ const api = axios.create({
 export const deleteHouse = createAsyncThunk(
   'houses/deleteHouse',
   async (id) => {
+    // eslint-disable-next-line no-useless-catch
     try {
       // Make the delete request using Axios
       await api.delete(`/houses/${id}`);
       return id; // Return the item ID on success
     } catch (error) {
       // Handle any errors
-      console.error('Error deleting item:', error);
+    //   console.error('Error deleting item:', error);
       throw error;
     }
   },

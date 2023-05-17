@@ -1,21 +1,14 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { IoCaretBackOutline } from 'react-icons/io5';
-import {
-  Navigation, A11y,
-} from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './deleteHouse.scss';
 import { fetchHouses, deleteHouse } from '../../Redux/Reducers/deleteHouseSlice';
+import { houseData } from '../../mockData';
 
 const DeleteHouse = () => {
   const dispatch = useDispatch();
-  const houses = useSelector((state) => state.houses.houses);
+  // const houses = useSelector((state) => state.houses.houses);
   const status = useSelector((state) => state.houses.status);
 
   useEffect(() => {
@@ -31,33 +24,24 @@ const DeleteHouse = () => {
   }, [dispatch, status]);
 
   return (
-    <section className="house-sec">
+    <section className="house-cont">
       <h2>ADDED HOUSES</h2>
-      <h3 className="email">My house collections</h3>
-      {status === 'loading' && <div>Loading...</div>}
-      {status === 'succeeded' && (
-        <Swiper
-          className="house-list"
-          modules={[Navigation, A11y]}
-          spaceBetween={10}
-          slidesPerView={3}
-          navigation
-        >
+      <h3>My house collections</h3>
+      <div className="list-cont">
+        <table>
           {
-            houses.map((item) => (
-              <SwiperSlide className="list-items" key={item.id}>
-                <div className="houses-imgs">
-                  <img src={item.image} style={{ width: '70', height: '70' }} alt={item.name} />
-                </div>
-                <h5 className={styles.name}><Link to={`${item.id}`}>{item.name}</Link></h5>
-                <div className="points">....................</div>
-                <p className="email">{item.description}</p>
-                <input type="button" className="delete" onClick={deleteHouse} />
-              </SwiperSlide>
-            ))
-          }
-        </Swiper>
-      )}
+        houseData.map((item) => (
+          // eslint-disable-next-line react/jsx-key
+          <tr>
+            <td className={styles.name}>
+              {item.name}
+              <input type="button" className="delete" onClick={deleteHouse} value="Delete" />
+            </td>
+          </tr>
+        ))
+      }
+        </table>
+      </div>
       <Link to="/">
         <button type="button" aria-label="Go back" className="back-btn"><IoCaretBackOutline /></button>
       </Link>
