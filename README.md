@@ -50,7 +50,15 @@
 
 ### Key Features <a name="key-features"></a>
 
-- Booking a house reseravtion
+- Booking a house reseravtion.
+- Add a new house.
+- Delete a house.
+- My reservations page only for the logged-in users.
+- Responsive Design.
+- State Management using Redux toolkit.
+- Use latest ES6 modules.
+- Design inspired by a Behance App design.
+- Axios for making HTTP requests from the server.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -70,7 +78,7 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- [API](https://github.com/Wahaj-Ali/homely-frontend)
+- [API](https://github.com/belmeetmule/homely-backend)
 - [git](https://git-scm.com/)
 - [node.js](https://nodejs.org/en/)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -134,13 +142,26 @@ You can deploy this project using:
 - [Twitter](https://twitter.com/Ali96Wahaj)
 - [LinkedIn](https://www.linkedin.com/in/wahaj-ali96)
 
+👤 **Mulugeta Belete**
+
+- [GitHub](https://github.com/belmeetmule)
+- [Twitter](https://twitter.com/belmeetmule)
+- [LinkedIn](https://www.linkedin.com/in/mulugeta-belete/)
+
+👤 **Akhror Valiev**
+
+- [GitHub](https://github.com/akhror-valiev)
+- [Twitter](https://twitter.com/oshie0115)
+- [LinkedIn](https://www.linkedin.com/in/oshie0115/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add more greeting messages.
+- Add more details about the hosue.
+- Update the style for a modern design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
