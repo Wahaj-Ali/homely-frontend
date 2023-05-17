@@ -30,7 +30,6 @@ export const deleteHouse = createAsyncThunk(
     }
   },
 );
-
 const deleteHouseSlice = createSlice({
   name: 'houses',
   initialState: {
@@ -41,21 +40,20 @@ const deleteHouseSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchHouses.pending, (state) => {
-        state.status = 'loading';
-      })
-      .addCase(fetchHouses.fulfilled, (state, action) => {
-        state.status = 'succeeded';
-        state.houses = action.payload;
-      })
+    //   .addCase(fetchHouses.pending, (state) => {
+    //     state.status = 'loading';
+    //   })
+    //   .addCase(fetchHouses.fulfilled, (state, action) => {
+    //     state.status = 'succeeded';
+    //     state.houses = action.payload;
+    //   })
       .addCase(deleteHouse.fulfilled, (state, action) => {
-        state.status = 'succeeded';
-        state.houses = action.payload;
-      })
-      .addCase(fetchHouses.rejected, (state, action) => {
-        state.status = 'failed';
-        state.error = action.error.message;
+        console.log('House deleted:', action.payload);
       });
+    //   .addCase(fetchHouses.rejected, (state, action) => {
+    //     state.status = 'failed';
+    //     state.error = action.error.message;
+    //   });
   },
 });
 

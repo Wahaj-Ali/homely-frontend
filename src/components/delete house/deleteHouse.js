@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import styles from './deleteHouse.scss';
 import { fetchHouses, deleteHouse } from '../../Redux/Reducers/deleteHouseSlice';
 
-const DeleteHouse = () => {
+const DeleteHouse = (id) => {
   const dispatch = useDispatch();
   const houses = useSelector((state) => state.houses.houses);
   const status = useSelector((state) => state.houses.status);
@@ -21,6 +21,19 @@ const DeleteHouse = () => {
       dispatch(deleteHouse());
     }
   }, [dispatch, status]);
+
+  const handleDelete = () => {
+    dispatch(deleteHouse(id))
+      .unwrap()
+      .then(() => {
+        // Handle any post-deletion logic
+        console.log('Item deleted successfully');
+      })
+      .catch((error) => {
+        // Handle any errors
+        console.error('Error deleting item:', error);
+      });
+  };
 
   return (
     <section className="house-cont">
@@ -38,7 +51,7 @@ const DeleteHouse = () => {
                     <input
                       type="button"
                       className="delete-btn"
-                      onClick={() => deleteHouse(item.id)}
+                      onClick={() => handleDelete(item.id)}
                       value="Delete"
                     />
                   </td>
