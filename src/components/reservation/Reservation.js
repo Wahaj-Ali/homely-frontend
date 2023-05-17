@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { IoCaretBackOutline } from 'react-icons/io5';
 import { createReservation } from '../../Redux/Reducers/reservationsSlice';
 import { fetchCurrentUser } from '../../Redux/Reducers/authSlice';
 import './Reservation.scss';
 
 const Reservation = () => {
+  const navigate = useNavigate();
   const [selectedDate, setSelectedDate] = useState(null);
   const dispatch = useDispatch();
   const {
@@ -30,6 +31,7 @@ const Reservation = () => {
     dispatch(createReservation(reservationData))
       .then((response) => {
         console.log(response);
+        navigate('/my_reservations');
       })
       .catch((error) => {
         console.error(error);
