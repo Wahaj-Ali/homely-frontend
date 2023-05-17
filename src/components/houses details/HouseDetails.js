@@ -32,10 +32,10 @@ const HousesDetails = () => {
                   <p>City: </p>
                   <p>{house.city}</p>
                 </li>
-                {/* <li className="first">
-                  <p>State: </p>
-                  <p>{housedetail.state}</p>
-                </li> */}
+                <li className="first">
+                  <p>House ID: </p>
+                  <p>{house.id}</p>
+                </li>
                 <li className="first">
                   <p>Daily Rent:</p>
                   <p>
@@ -51,9 +51,9 @@ const HousesDetails = () => {
                 </h4>
                 <img src={icon} alt="icon" />
               </div>
-              <Link to="/reserve">
+              <Link to={`/reservation/${id}`}>
                 <button type="button" aria-label="Go back" className="reserve-btn">
-                  Book House
+                  Book Your Visit
                   <AiOutlineRightCircle />
                 </button>
               </Link>

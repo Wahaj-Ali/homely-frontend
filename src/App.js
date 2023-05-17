@@ -10,6 +10,8 @@ import Houses from './components/houses/Houses';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import AddHouse from './components/add hosue/addHouse';
+import Reservation from './components/reservation/Reservation';
+import MyReservations from './components/my reservations/MyReservations';
 
 const SidebarLayout = () => (
   <>
@@ -27,6 +29,8 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/add_house" element={<AddHouse />} />
+            <Route path="/reservation/:id" element={<Reservation />} />
+            <Route path="/my_reservations" element={<MyReservations />} />
             <Route element={<SidebarLayout />}>
               <Route path="/" element={<Houses />} />
               <Route path="/:id" element={<HousesDetails />} />
