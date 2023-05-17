@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { IoCaretBackOutline } from 'react-icons/io5';
@@ -24,7 +25,7 @@ const Reservation = () => {
     const reservationData = {
       userId: id,
       houseId: house.id,
-      reservationDate: '5/5/2023',
+      reservationDate: selectedDate,
     };
     dispatch(createReservation(reservationData))
       .then((response) => {
@@ -55,18 +56,17 @@ const Reservation = () => {
           </div>
           <div>
             <p>Please Select a date of your visit.</p>
-            <div>
+            <div className="confirm-input">
               <DatePicker
                 selected={selectedDate}
                 onChange={handleDateChange}
-                format="DD/MM/YYYY"
-                placeholder="Choose Start Date"
+                utcOffset
               />
+              <button type="button" className="book-btn" onClick={handleCreateReservation}>
+                Confirm Visit
+              </button>
             </div>
           </div>
-          <button type="button" className="book-btn" onClick={handleCreateReservation}>
-            Confirm Visit
-          </button>
           <Link to={`/${house.id}`}>
             <button type="button" aria-label="Go back">
               <IoCaretBackOutline />
