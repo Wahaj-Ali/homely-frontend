@@ -5,7 +5,7 @@ import { HiOutlineMailOpen } from 'react-icons/hi';
 import { RiLockPasswordLine } from 'react-icons/ri';
 import { IoCaretBackOutline } from 'react-icons/io5';
 import { Link, useNavigate } from 'react-router-dom';
-import { login } from '../../Redux/Reducers/authSlice';
+import { fetchCurrentUser, login } from '../../Redux/Reducers/authSlice';
 import './Login.scss';
 
 const Login = () => {
@@ -29,7 +29,10 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     // console.log('Form submitted:', email, password);
-    dispatch(login({ email, password }));
+    dispatch(login({ email, password }))
+      .then(() => {
+        dispatch(fetchCurrentUser());
+      });
   };
 
   return (

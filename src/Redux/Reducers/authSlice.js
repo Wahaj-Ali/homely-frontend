@@ -70,7 +70,11 @@ const authSlice = createSlice({
     error: null,
     loggedIn: false,
   },
-  reducers: {},
+  reducers: {
+    setUserId: (state, action) => {
+      state.id = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(login.pending, (state) => {
@@ -81,6 +85,7 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.loggedIn = true;
+        state.id = action.payload.id;
       })
       .addCase(login.rejected, (state, action) => {
         state.error = action.error.message;
@@ -88,6 +93,7 @@ const authSlice = createSlice({
       })
       .addCase(logoutUser.fulfilled, (state) => {
         state.loggedIn = false;
+        state.id = null;
       })
       .addCase(fetchCurrentUser.pending, (state) => {
         state.isLoading = true;
@@ -105,4 +111,5 @@ const authSlice = createSlice({
   },
 });
 
+export const { setUserId } = authSlice.actions;
 export default authSlice.reducer;
