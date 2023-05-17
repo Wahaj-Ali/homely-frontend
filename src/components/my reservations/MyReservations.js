@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchReservations } from '../../Redux/Reducers/reservationsSlice';
-import { fetchHouseById } from '../../Redux/Reducers/houseDetailsSlice';
 import './MyReservations.scss';
+import { Link } from 'react-router-dom';
+import { IoCaretBackOutline } from 'react-icons/io5';
+import { fetchHouseById } from '../../Redux/Reducers/houseDetailsSlice';
+import { fetchReservations } from '../../Redux/Reducers/reservationsSlice';
 
 const ReservationList = () => {
   const dispatch = useDispatch();
@@ -42,28 +44,32 @@ const ReservationList = () => {
   };
 
   return (
-    <div>
-      <h2>Your Reservations</h2>
-      {reservations.map((reservation) => (
-        <div key={reservation.id} className="reservation-details">
-          <p>
-            Visit Date:
-            {' '}
-            {reservation.reservation_date}
-          </p>
-          <p>
-            House ID:
-            {' '}
-            {reservation.house_id}
-          </p>
-          <p>
-            House Name:
-            {' '}
-            {getHouseName(reservation.house_id)}
-          </p>
+    <section className="my_reservations_sec">
+      <div className="my_reservations">
+        <h2>Your Reservations</h2>
+        <div className="headings">
+          <p>Visit Date</p>
+          <p>House ID</p>
+          <p>House Name</p>
         </div>
-      ))}
-    </div>
+        {reservations.map((reservation) => (
+          <div key={reservation.id} className="reservation-details">
+            <p>
+              {reservation.reservation_date}
+            </p>
+            <p>
+              {reservation.house_id}
+            </p>
+            <p>
+              {getHouseName(reservation.house_id)}
+            </p>
+          </div>
+        ))}
+        <Link to="/">
+          <button type="button" aria-label="Go back" className="back-btn"><IoCaretBackOutline /></button>
+        </Link>
+      </div>
+    </section>
   );
 };
 
