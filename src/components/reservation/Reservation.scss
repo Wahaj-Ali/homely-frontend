@@ -54,3 +54,19 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .reservation_sec {
+    .book-btn {
+      width: 160px;
+      font-size: 14px;
+    }
+
+    .reservation {
+      .back-btn {
+        position: absolute;
+        top: 30px;
+      }
+    }
+  }
+}
