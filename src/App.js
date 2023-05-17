@@ -11,6 +11,9 @@ import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import AddHouse from './components/add hosue/addHouse';
 import DeleteHouse from './components/delete house/deleteHouse';
+import Reservation from './components/reservation/Reservation';
+import MyReservations from './components/my reservations/MyReservations';
+
 
 const SidebarLayout = () => (
   <>
@@ -29,6 +32,8 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/add_house" element={<AddHouse />} />
             <Route path="/delete_house" element={<DeleteHouse />} />
+            <Route path="/reservation/:id" element={<Reservation />} />
+            <Route path="/my_reservations" element={<MyReservations />} />
             <Route element={<SidebarLayout />}>
               <Route path="/" element={<Houses />} />
               <Route path="/:id" element={<HousesDetails />} />

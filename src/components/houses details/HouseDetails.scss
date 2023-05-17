@@ -58,7 +58,7 @@
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
-    width: 150px;
+    width: 190px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -104,6 +104,48 @@
     img {
       width: 80px;
       height: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .details-sec {
+    margin-left: 120px;
+
+    .detail-container {
+      flex-direction: column;
+      padding: 20px;
+
+      .image {
+        margin: 30px 2px;
+        height: 30vh;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .details {
+        width: 100%;
+        padding: 0;
+
+        .first {
+          height: 30px;
+          align-items: center;
+        }
+
+        .reserve-btn {
+          font-size: 0.8rem;
+          width: 130px;
+          height: 35px;
+        }
+      }
+    }
+
+    .back-btn {
+      font-size: 0.8rem;
+      width: 50px;
+      height: 35px;
     }
   }
 }
