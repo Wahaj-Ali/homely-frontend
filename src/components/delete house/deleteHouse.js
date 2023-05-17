@@ -4,7 +4,6 @@ import { IoCaretBackOutline } from 'react-icons/io5';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './deleteHouse.scss';
 import { fetchHouses, deleteHouse } from '../../Redux/Reducers/deleteHouseSlice';
-// import { houseData } from '../../mockData';
 
 const DeleteHouse = () => {
   const dispatch = useDispatch();
