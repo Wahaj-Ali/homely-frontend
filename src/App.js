@@ -10,6 +10,7 @@ import Houses from './components/houses/Houses';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import AddHouse from './components/add hosue/addHouse';
+import DeleteHouse from './components/delete house/deleteHouse';
 import Reservation from './components/reservation/Reservation';
 import MyReservations from './components/my reservations/MyReservations';
 
@@ -29,6 +30,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/add_house" element={<AddHouse />} />
+            <Route path="/delete_house" element={<DeleteHouse />} />
             <Route path="/reservation/:id" element={<Reservation />} />
             <Route path="/my_reservations" element={<MyReservations />} />
             <Route element={<SidebarLayout />}>
