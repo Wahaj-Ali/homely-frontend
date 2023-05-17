@@ -6,12 +6,21 @@ export const createHouse = createAsyncThunk('houses/create', async (formData) =>
   return response.data;
 });
 
+export const deleteHouse = createAsyncThunk(
+  'houses/deleteHouse',
+  async (houseId) => {
+    const response = await axios.delete(`http://localhost:4000/api/v1/houses/${houseId}`);
+    return response.data;
+  },
+);
+
 const addHouseSlice = createSlice({
   name: 'houses',
   initialState: {
     houses: [],
     isLoading: false,
     error: null,
+    status: 'idle',
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -26,6 +35,18 @@ const addHouseSlice = createSlice({
       })
       .addCase(createHouse.rejected, (state, action) => {
         state.isLoading = false;
+        state.error = action.error.message;
+      })
+      .addCase(deleteHouse.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(deleteHouse.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        // Update the state by removing the deleted house from the houses array
+        state.houses = state.houses.filter((house) => house.id !== action.payload.id);
+      })
+      .addCase(deleteHouse.rejected, (state, action) => {
+        state.status = 'failed';
         state.error = action.error.message;
       });
   },
