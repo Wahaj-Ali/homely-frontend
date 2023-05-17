@@ -107,3 +107,45 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .details-sec {
+    margin-left: 120px;
+
+    .detail-container {
+      flex-direction: column;
+      padding: 20px;
+
+      .image {
+        margin: 30px 2px;
+        height: 30vh;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .details {
+        width: 100%;
+        padding: 0;
+
+        .first {
+          height: 30px;
+          align-items: center;
+        }
+
+        .reserve-btn {
+          font-size: 0.8rem;
+          width: 130px;
+          height: 35px;
+        }
+      }
+    }
+
+    .back-btn {
+      font-size: 0.8rem;
+      width: 50px;
+      height: 35px;
+    }
+  }
+}

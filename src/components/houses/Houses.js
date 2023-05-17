@@ -23,6 +23,8 @@ const Houses = () => {
     }
   }, [dispatch, status]);
 
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <section className="house-sec">
       <h2>LATEST HOUSES</h2>
@@ -34,7 +36,7 @@ const Houses = () => {
           className="house-list"
           modules={[Navigation, A11y]}
           spaceBetween={10}
-          slidesPerView={3}
+          slidesPerView={isMobile ? 1 : 3}
           navigation
         >
           {
