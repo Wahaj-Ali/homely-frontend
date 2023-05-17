@@ -85,3 +85,32 @@ h2 {
   left: 0;
   top: 90px;
 }
+
+@media only screen and (max-width: 768px) {
+  .menu {
+    width: 120px;
+
+    a {
+      font-size: 10px;
+      padding: 12px 5px;
+    }
+  }
+
+  .house-sec {
+    margin-left: 120px;
+
+    h2 {
+      font-size: 14px;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 50px;
+    height: 45px;
+
+    &::after {
+      font-size: inherit;
+    }
+  }
+}
