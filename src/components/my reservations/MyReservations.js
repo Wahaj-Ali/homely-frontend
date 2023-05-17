@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchReservations } from '../../Redux/Reducers/reservationsSlice';
+import './MyReservations.scss';
 
 const ReservationList = () => {
   const dispatch = useDispatch();
@@ -31,7 +32,7 @@ const ReservationList = () => {
     <div>
       <h2>Your Reservations</h2>
       {reservations.map((reservation) => (
-        <div key={reservation.id}>
+        <div key={reservation.id} className="reservation-details">
           <p>
             Visit Date:
             {reservation.reservation_date}
