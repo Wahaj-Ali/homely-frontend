@@ -14,7 +14,6 @@ import DeleteHouse from './components/delete house/deleteHouse';
 import Reservation from './components/reservation/Reservation';
 import MyReservations from './components/my reservations/MyReservations';
 
-
 const SidebarLayout = () => (
   <>
     <SideBar />
