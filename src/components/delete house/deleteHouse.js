@@ -1,44 +1,29 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { IoCaretBackOutline } from 'react-icons/io5';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './deleteHouse.scss';
-import { fetchHouses, deleteHouse } from '../../Redux/Reducers/deleteHouseSlice';
+// import { fetchHouses } from '../../Redux/Reducers/deleteHouseSlice';
+import { deleteHouse } from '../../Redux/Reducers/addHouseSlice';
 
-const DeleteHouse = (id) => {
+const DeleteHouse = () => {
   const dispatch = useDispatch();
   const houses = useSelector((state) => state.houses.houses);
   const status = useSelector((state) => state.houses.status);
 
-  useEffect(() => {
-    if (status === 'idle') {
-      dispatch(fetchHouses());
-    }
-  }, [dispatch, status]);
-
-  useEffect(() => {
-    if (status === 'idle') {
-      dispatch(deleteHouse());
-    }
-  }, [dispatch, status]);
-
-  const handleDelete = () => {
-    dispatch(deleteHouse(id))
-      .unwrap()
+  const handleDelete = (houseId) => {
+    dispatch(deleteHouse(houseId))
       .then(() => {
-        // Handle any post-deletion logic
-        console.log('Item deleted successfully');
+        console.log('House deleted successfully!');
       })
       .catch((error) => {
-        // Handle any errors
-        console.error('Error deleting item:', error);
+        console.error('Error deleting house:', error);
       });
   };
 
   return (
     <section className="house-cont">
-      <h2>ADDED HOUSES</h2>
-      <h3>My house collections</h3>
+      <h2>ALL HOUSES</h2>
       <div className="list-cont">
         {status === 'loading' && <div>Loading...</div>}
         {status === 'succeeded' && (
