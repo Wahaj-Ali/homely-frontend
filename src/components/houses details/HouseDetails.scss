@@ -108,11 +108,11 @@
   }
 }
 
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 768px) {
   .details-sec {
     margin-left: 120px;
 
-    .detail-container{
+    .detail-container {
       flex-direction: column;
       padding: 20px;
 
@@ -144,8 +144,8 @@
 
     .back-btn {
       font-size: 0.8rem;
-          width: 50px;
-          height: 35px;
+      width: 50px;
+      height: 35px;
     }
   }
 }
