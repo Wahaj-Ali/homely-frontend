@@ -29,14 +29,14 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 80%;
+    width: 90%;
   }
 
   .book-btn {
     position: inherit;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-    width: 150px;
+    width: 180px;
     background-color: $text-color;
     color: $secondary-color;
     font-weight: 700;
@@ -47,7 +47,9 @@
       input {
         width: 200px;
         height: 30px;
+        border: 2px solid $text-color;
         border-radius: 5rem;
+        background-color: $secondary-color;
       }
     }
   }
