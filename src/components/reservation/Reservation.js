@@ -73,7 +73,7 @@ const Reservation = () => {
             </div>
           </div>
           <Link to={`/${house.id}`}>
-            <button type="button" aria-label="Go back">
+            <button type="button" aria-label="Go back" className="back-btn">
               <IoCaretBackOutline />
             </button>
           </Link>
