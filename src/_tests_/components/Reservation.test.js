@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
@@ -25,5 +25,4 @@ describe('Reservation', () => {
     expect(screen.getByText('Book your visit to')).toBeInTheDocument();
     expect(screen.getByText('Confirm Visit')).toBeInTheDocument();
   });
-
 });

@@ -11,18 +11,17 @@ jest.mock('../../Redux/Reducers/regSlice', () => ({
 
 describe('Register', () => {
   it('submits the registration form successfully', async () => {
-    const { getByPlaceholderText, getByRole } = render(
+    const { getByPlaceholderText } = render(
       <Provider store={store}>
         <MemoryRouter>
           <Register />
         </MemoryRouter>
-      </Provider>
+      </Provider>,
     );
 
     const emailInput = getByPlaceholderText('Enter email');
     const fullNameInput = getByPlaceholderText('Enter full name');
     const passwordInput = getByPlaceholderText('password');
-    const registerButton = getByRole('button', { name: 'Register' });
 
     // Fill in the form inputs
     fireEvent.change(emailInput, { target: { value: 'test@example.com' } });
