@@ -35,6 +35,9 @@
 
 ### Screenshot of of the initial state of the Kanban board
 
+![236180746-4812d9c4-2204-47ea-9a9c-10adf7b3c6a6](https://github.com/Wahaj-Ali/homely-frontend/assets/111431787/abb081aa-114c-49fa-84e7-66e35cccd7ce)
+
+![236180950-a9b6aa9d-3973-4424-9cc1-f9f9f00f0917](https://github.com/Wahaj-Ali/homely-frontend/assets/111431787/94bb4fe9-f4e0-41f6-bda8-46e35cebfc16)
 
 
 ## 🛠 Built With <a name="built-with"></a>
