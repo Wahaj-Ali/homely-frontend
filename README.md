@@ -31,6 +31,13 @@
 
 ## Kanban Board 
 
+We are a team of 4 members.
+
+- [Wahaj Ali](https://github.com/Wahaj-Ali)
+- [Mulugeta Belete](https://github.com/belmeetmule)
+- [Oshie](https://github.com/akhror-valiev)
+- [Chukwuma Paul Mosanya](https://github.com/blase147)
+
 [Kanban Board](https://github.com/belmeetmule/homely-backend/projects/1)
 
 ### Screenshot of of the initial state of the Kanban board
