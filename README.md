@@ -84,7 +84,7 @@ We are a team of 4 members.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- N/A
+- [Homely](https://homelyheaven.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
