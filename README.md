@@ -4,6 +4,8 @@
 # 📗 Table of Contents
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 Hello React Frontend ](#-hello-react-frontend-)
+  - [Kanban Board](#kanban-board)
+    - [Screenshot of of the initial state of the Kanban board](#screenshot-of-of-the-initial-state-of-the-kanban-board)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -26,6 +28,14 @@
 
 # 📖 Hello React Frontend <a name="about-the-project"></a>
 **Homely-frontend** is an implemention of a connection between Ruby on Rails back-end and React front-end. [Homely-backend](https://github.com/belmeetmule/homely-backend) handles the backend API, and [Hello React Frontend](https://github.com/Wahaj-Ali/homely-frontend) handles the frontend UI to display a random greeting message.
+
+## Kanban Board 
+
+[Kanban Board](https://github.com/belmeetmule/homely-backend/projects/1)
+
+### Screenshot of of the initial state of the Kanban board
+
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
