@@ -23,6 +23,10 @@ const Houses = () => {
     }
   }, [dispatch, status]);
 
+  useEffect(() => {
+    dispatch(fetchHouses());
+  }, [dispatch]);
+
   const isMobile = window.innerWidth <= 768;
 
   return (
