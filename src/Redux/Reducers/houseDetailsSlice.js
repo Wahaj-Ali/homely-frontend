@@ -1,8 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+const BASE_URL = 'https://homely-backend.onrender.com';
+
 export const fetchHouseById = createAsyncThunk('houses/fetchHouseById', async (id) => {
-  const response = await axios.get(`http://localhost:4000/api/v1/houses/${id}`);
+  const response = await axios.get(`${BASE_URL}/api/v1/houses/${id}`);
   return response.data;
 });
 

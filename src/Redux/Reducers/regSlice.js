@@ -1,9 +1,11 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+const BASE_URL = 'https://homely-backend.onrender.com';
+
 /* eslint-disable camelcase */
 export const signUp = createAsyncThunk('user/signUp', async ({ full_name, email, password }) => {
-  const response = await axios.post('http://localhost:4000/signup', {
+  const response = await axios.post(`${BASE_URL}/signup`, {
     user: { full_name, email, password },
   });
   return response.data;
