@@ -1,15 +1,17 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+const BASE_URL = 'https://homely-backend.onrender.com';
+
 export const createHouse = createAsyncThunk('houses/create', async (formData) => {
-  const response = await axios.post('http://localhost:4000/api/v1/houses', { house: formData });
+  const response = await axios.post(`${BASE_URL}/api/v1/houses`, { house: formData });
   return response.data;
 });
 
 export const deleteHouse = createAsyncThunk(
   'houses/deleteHouse',
   async (houseId) => {
-    const response = await axios.delete(`http://localhost:4000/api/v1/houses/${houseId}`);
+    const response = await axios.delete(`${BASE_URL}api/v1/houses/${houseId}`);
     return response.data;
   },
 );

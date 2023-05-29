@@ -1,6 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+const BASE_URL = 'https://homely-backend.onrender.com';
+
 // Async thunk action to create a new reservation
 export const createReservation = createAsyncThunk(
   'reservations/createReservation',
@@ -8,7 +10,7 @@ export const createReservation = createAsyncThunk(
     userId, houseId, reservationDate,
   }) => {
     try {
-      const response = await axios.post(`http://localhost:4000/api/v1/users/${userId}/reservations`, {
+      const response = await axios.post(`${BASE_URL}/api/v1/users/${userId}/reservations`, {
         reservation: {
           user_id: userId,
           house_id: houseId,
@@ -26,7 +28,7 @@ export const fetchReservations = createAsyncThunk(
   'reservations/fetchReservations',
   async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/v1/users/${userId}/reservations`);
+      const response = await axios.get(`${BASE_URL}/api/v1/users/${userId}/reservations`);
       return response.data;
     } catch (error) {
       throw new Error(error.response.data.error);

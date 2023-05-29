@@ -1,8 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+const BASE_URL = 'https://homely-backend.onrender.com';
+
 export const login = createAsyncThunk('auth/login', async ({ email, password }) => {
-  const response = await axios.post('http://localhost:4000/login', {
+  const response = await axios.post(`${BASE_URL}/login`, {
     user: { email, password },
   });
   // console.log(response);
@@ -20,7 +22,7 @@ export const logoutUser = createAsyncThunk(
   'auth/logout',
   async (_, thunkAPI) => {
     try {
-      const response = await axios.delete('http://localhost:4000/logout', {
+      const response = await axios.delete(`${BASE_URL}/logout`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -41,7 +43,7 @@ export const fetchCurrentUser = createAsyncThunk(
   'auth/fetchCurrentUser',
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get('http://localhost:4000/current_user', {
+      const response = await axios.get(`${BASE_URL}/current_user`, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${localStorage.getItem('token')}`,
