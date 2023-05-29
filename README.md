@@ -79,6 +79,7 @@ We are a team of 4 members.
 - Use latest ES6 modules.
 - Design inspired by a Behance App design.
 - Axios for making HTTP requests from the server.
+- Use Swiperjs library to create the slider for the main-page.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
