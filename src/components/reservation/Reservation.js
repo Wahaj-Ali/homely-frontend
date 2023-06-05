@@ -59,7 +59,7 @@ const Reservation = () => {
           <div>
             <p>
               If you wish to visit the house,
-              please select the selector below to choose a date.
+              please choose a date from the selector below.
             </p>
             <div className="confirm-input">
               <DatePicker

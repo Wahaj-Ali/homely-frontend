@@ -144,3 +144,13 @@ small {
     left: 0;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .social {
+    margin: 20px 15px;
+  }
+
+  small {
+    font-size: 0.5rem;
+  }
+}
