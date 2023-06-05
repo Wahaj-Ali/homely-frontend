@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { IoCaretBackOutline } from 'react-icons/io5';
 import { useDispatch, useSelector } from 'react-redux';
@@ -10,6 +10,7 @@ const DeleteHouse = () => {
   const dispatch = useDispatch();
   const houses = useSelector((state) => state.houses.houses);
   const status = useSelector((state) => state.houses.status);
+  const [successMessage, setSuccessMessage] = useState('');
 
   useEffect(() => {
     dispatch(fetchHouses());
@@ -18,7 +19,11 @@ const DeleteHouse = () => {
   const handleDelete = (houseId) => {
     dispatch(deleteHouse(houseId))
       .then(() => {
-        console.log('House deleted successfully!');
+        setSuccessMessage('House deleted successfully!');
+        dispatch(fetchHouses());
+        setTimeout(() => {
+          setSuccessMessage('');
+        }, 5000);
       })
       .catch((error) => {
         console.error('Error deleting house:', error);
@@ -28,6 +33,7 @@ const DeleteHouse = () => {
   return (
     <section className="house-cont">
       <h2>ALL HOUSES</h2>
+      {successMessage && <div className="success-message">{successMessage}</div>}
       <div className="list-cont">
         {status === 'loading' && <div>Loading...</div>}
         {status === 'succeeded' && (
