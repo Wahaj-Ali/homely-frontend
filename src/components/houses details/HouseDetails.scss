@@ -134,9 +134,25 @@
         width: 100%;
         padding: 0;
 
+        .name {
+          font-size: 0.9rem;
+        }
+
         .first {
           height: 30px;
           align-items: center;
+
+          p {
+            font-size: 0.7rem;
+          }
+        }
+
+        .ulIcon {
+          .iconColor {
+            img {
+              width: 50px;
+            }
+          }
         }
 
         .reserve-btn {
