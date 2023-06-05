@@ -12,6 +12,7 @@ const HousesDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const house = useSelector((state) => state.houseDetail.house);
+  const userId = useSelector((state) => state.auth.id);
 
   useEffect(() => {
     dispatch(fetchHouseById(id));
@@ -52,11 +53,17 @@ const HousesDetails = () => {
                 <img src={icon} alt="icon" />
               </div>
               <Link to={`/reservation/${id}`}>
-                <button type="button" aria-label="Go back" className="reserve-btn">
+                <button
+                  type="button"
+                  aria-label="Go back"
+                  className="reserve-btn"
+                  disabled={!userId}
+                >
                   Book Your Visit
                   <AiOutlineRightCircle />
                 </button>
               </Link>
+              {!userId && <p>Please log in to book a visit.</p>}
             </div>
           </div>
         </div>
