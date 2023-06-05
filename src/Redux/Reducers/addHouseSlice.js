@@ -11,7 +11,7 @@ export const createHouse = createAsyncThunk('houses/create', async (formData) =>
 export const deleteHouse = createAsyncThunk(
   'houses/deleteHouse',
   async (houseId) => {
-    const response = await axios.delete(`${BASE_URL}api/v1/houses/${houseId}`);
+    const response = await axios.delete(`${BASE_URL}/api/v1/houses/${houseId}`);
     return response.data;
   },
 );
